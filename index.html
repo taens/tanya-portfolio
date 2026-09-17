@@ -174,6 +174,29 @@ button{ font-family:inherit; cursor:pointer; }
   display:flex; flex-direction:column; gap:6px;
 }
 .pain-card .tag-mini{ font-size:11px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--color-tertiary); }
+
+/* ---------- Migration case study: segments, phases, risk callouts ---------- */
+.segment-grid{ display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; margin-top:24px; }
+@media (max-width:720px){ .segment-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:480px){ .segment-grid{ grid-template-columns:1fr; } }
+.segment-card{ background:var(--color-surface-container); border-radius:var(--shape-lg); padding:16px 18px; }
+.segment-card .num{ font-family:var(--font-brand); font-size:18px; color:var(--color-primary); }
+
+.phase-bar{ display:flex; margin-top:8px; }
+.phase-bar-step{ flex:1; text-align:center; padding:10px 8px; font-size:12px; font-weight:600; color:var(--color-on-surface-variant); border-bottom:3px solid var(--color-outline-variant); }
+.phase-bar-step.active{ color:var(--color-on-surface); border-bottom-color:var(--color-primary); }
+
+.risk-chip{
+  display:flex; align-items:center; gap:10px; background:var(--color-tertiary-container); color:var(--color-on-tertiary-container);
+  border-radius:var(--shape-md); padding:12px 16px; font-size:13px; margin-bottom:10px;
+}
+.risk-chip .material-symbols-outlined{ font-size:18px; flex-shrink:0; }
+
+.insight-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px; }
+@media (max-width:720px){ .insight-grid{ grid-template-columns:1fr; } }
+.insight-card{ background:var(--color-surface-container); border-radius:var(--shape-lg); padding:20px 22px; }
+.insight-card .num{ font-family:var(--font-brand); font-size:20px; color:var(--color-primary); }
+.insight-card blockquote{ margin:10px 0 0; padding-left:12px; border-left:3px solid var(--color-primary-container); font-style:italic; color:var(--color-on-surface-variant); font-size:14px; }
 .pain-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:28px; }
 @media (max-width:720px){ .pain-grid{ grid-template-columns:1fr; } }
 
@@ -234,6 +257,13 @@ footer a{ color:var(--color-primary); font-weight:500; }
 .swimlane-cell.heavy{ background:var(--color-primary); }
 .swimlane-caption{ margin-top:14px; }
 
+.migration-grid{ grid-template-columns:110px repeat(16,1fr); }
+@media (max-width:600px){
+  .migration-grid{ grid-template-columns:74px repeat(16,1fr); gap:3px; }
+  .migration-grid .swimlane-label{ font-size:10px; }
+  .migration-grid .swimlane-cell{ height:16px; }
+}
+
 /* ---------- Scene layout: illustration beside wireframe ---------- */
 </style>
 </head>
@@ -284,6 +314,30 @@ footer a{ color:var(--color-primary); font-weight:500; }
               <circle cx="90" cy="60" r="6" fill="#6750A4" opacity="0.6"/>
               <circle cx="150" cy="95" r="6" fill="#6750A4" opacity="0.6"/>
               <path d="M30 80 L90 60 L150 95" stroke="#6750A4" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+        </a>
+
+        <a class="card card-featured" href="#/case/migration" tabindex="0" onclick="return go('view-case-migration','/case/migration')">
+          <div class="card-copy">
+            <span class="card-tag">UX Research · Journey Mapping</span>
+            <h2 class="title-large">Migrating Without Losing Trust</h2>
+            <p class="body-medium">Researching how retail banking clients experience being migrated to a new bank after a merger, then mapping it into a journey that aligned Business, IT, and Design.</p>
+            <span class="card-arrow">View case study
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </span>
+          </div>
+          <div class="card-visual">
+            <svg viewBox="0 0 200 140" width="220">
+              <rect x="0" y="0" width="200" height="140" rx="16" fill="#EADDFF"/>
+              <line x1="20" y1="70" x2="180" y2="70" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.4"/>
+              <path d="M20,60 L70,95 L110,105 L150,55 L180,45" fill="none" stroke="#6750A4" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="20" cy="60" r="5" fill="#6750A4"/>
+              <circle cx="110" cy="105" r="5" fill="#6750A4" opacity="0.7"/>
+              <circle cx="180" cy="45" r="5" fill="#6750A4"/>
+              <rect x="16" y="115" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
+              <rect x="78" y="115" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
+              <rect x="140" y="115" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
             </svg>
           </div>
         </a>
@@ -590,6 +644,222 @@ footer a{ color:var(--color-primary); font-weight:500; }
   </div>
 </section>
 
+<!-- ============ CASE STUDY: BANK MERGER MIGRATION ============ -->
+<section class="view" id="view-case-migration">
+  <div class="container">
+    <div class="case-hero">
+      <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin-top:24px;">
+        <span class="material-symbols-outlined">arrow_back</span>
+        All work
+      </a>
+      <span class="card-tag">UX Research · Journey Mapping</span>
+      <h1 class="headline-large">Migrating Without Losing Trust</h1>
+      <p class="body-large">When a global bank acquired another, hundreds of thousands of retail clients had to be migrated onto new accounts, apps, and products, whether they'd asked for it or not. I led the research that uncovered what that actually felt like for them, then turned it into a journey map that aligned Business, IT, and Design around a single, realistic plan.</p>
+    </div>
+
+    <!-- CONTEXT & ROLE -->
+    <div class="case-section">
+      <div class="two-col">
+        <div>
+          <p class="label-large section-label">CONTEXT &amp; ROLE</p>
+          <h2 class="title-large" style="margin-bottom:16px;">Why this mattered</h2>
+          <p class="body-large" style="color:var(--color-on-surface-variant);">Some of these clients had never given their bank a second thought since opening their first account decades earlier. Now they had to learn a new app, new products, and a new relationship, on a timeline they didn't choose. My job was to understand what that felt like from their side, then make it concrete enough for Business, IT, and Design to build against together.</p>
+        </div>
+        <div>
+          <ul class="role-list">
+            <li>
+              <p class="title-medium">Research design &amp; fieldwork</p>
+              <p class="body-medium">Planned and ran interviews across four client segments, from digitally confident clients to those who'd already been forced to migrate a banking relationship once before.</p>
+            </li>
+            <li>
+              <p class="title-medium">Insight synthesis</p>
+              <p class="body-medium">Synthesised interviews and secondary research into five core insights, each paired with concrete communication and product recommendations.</p>
+            </li>
+            <li>
+              <p class="title-medium">Journey mapping</p>
+              <p class="body-medium">Authored the end-to-end migration journey, from first notice through to feeling settled, including the emotional curve and flagged risks.</p>
+            </li>
+            <li>
+              <p class="title-medium">Cross-functional alignment</p>
+              <p class="body-medium">Used the journey map as the shared reference point that aligned Business, IT, and Design around one realistic plan for delivery.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESEARCH APPROACH -->
+    <div class="case-section">
+      <p class="label-large section-label">RESEARCH APPROACH</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Who we talked to, and how</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">Over an eight-week research sprint, we combined client interviews with secondary research, moving from open discovery through to co-creating solutions directly with Business and IT.</p>
+
+      <div class="segment-grid">
+        <div class="segment-card">
+          <span class="num">01</span>
+          <p class="title-medium" style="margin-top:4px;">Digitally confident</p>
+          <p class="body-medium">Already banking entirely through an app; low apprehension about the move itself.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num">02</span>
+          <p class="title-medium" style="margin-top:4px;">Working families</p>
+          <p class="body-medium">Juggling shared and children's accounts; wanted the disruption kept invisible.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num">03</span>
+          <p class="title-medium" style="margin-top:4px;">Affluent investors</p>
+          <p class="body-medium">Simple investment products alongside banking; higher expectations of a white-glove move.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num">04</span>
+          <p class="title-medium" style="margin-top:4px;">Relationship migrants</p>
+          <p class="body-medium">Had already been forced to move a banking relationship across a border once before.</p>
+        </div>
+      </div>
+
+      <div class="phase-bar">
+        <div class="phase-bar-step active">Opportunity discovery</div>
+        <div class="phase-bar-step active">Problem scoping</div>
+        <div class="phase-bar-step active">Co-creation</div>
+      </div>
+      <p class="body-medium" style="margin-top:12px;">Findings fed two co-working sessions and a prioritisation workshop, run jointly with Business and IT stakeholders.</p>
+    </div>
+
+    <!-- FIVE INSIGHTS -->
+    <div class="case-section">
+      <p class="label-large section-label">WHAT WE HEARD</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Five things that shaped the redesign</h2>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <span class="num">01</span>
+          <p class="title-medium" style="margin-top:4px;">Expectations of transparency</p>
+          <p class="body-medium">Clients wanted a concrete picture of what would happen and when, not general reassurance.</p>
+          <blockquote>"Not knowing what was coming next was the hardest part."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">02</span>
+          <p class="title-medium" style="margin-top:4px;">One consistent message, everywhere</p>
+          <p class="body-medium">Slightly different messages across letters, app, and branch created more anxiety than the migration itself.</p>
+          <blockquote>"Three versions of the same letter just left me double-checking which one was right."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">03</span>
+          <p class="title-medium" style="margin-top:4px;">Experience is bigger than an app</p>
+          <p class="body-medium">Digital convenience mattered, but many clients still wanted the option of a real conversation.</p>
+          <blockquote>"I don't mind the new app. I just don't want to lose the person who already knows me."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">04</span>
+          <p class="title-medium" style="margin-top:4px;">First login is a moment, not the finish line</p>
+          <p class="body-medium">Clients needed several weeks past activation to feel genuinely settled, especially once a full payment cycle had run cleanly.</p>
+          <blockquote>"The app worked from day one. Feeling at home took closer to a month."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">05</span>
+          <p class="title-medium" style="margin-top:4px;">It wasn't their choice, so make it personal</p>
+          <p class="body-medium">Clients hadn't asked to be migrated, and a one-size-fits-all journey read as tone-deaf to that.</p>
+          <blockquote>"Nobody asked me if I wanted this. The least you can do is make it easy."</blockquote>
+        </div>
+      </div>
+    </div>
+
+    <!-- JOURNEY / EMOTIONAL CURVE -->
+    <div class="case-section">
+      <p class="label-large section-label">THE JOURNEY, MAPPED</p>
+      <h2 class="title-large" style="margin-bottom:16px;">One moment carried most of the emotional weight</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">Mapping the full migration, from the first notice clients received to life back to normal, made one thing clear: sentiment didn't decline steadily. It held, then dropped sharply right at activation, the account's first live moment, before recovering gradually over the following weeks.</p>
+
+      <div class="swimlane-wrap">
+        <div class="swimlane-grid migration-grid">
+          <div></div>
+          <div class="swimlane-head" style="grid-column: span 6;">BEFORE</div>
+          <div class="swimlane-head" style="grid-column: span 4;">DURING</div>
+          <div class="swimlane-head" style="grid-column: span 6;">AFTER</div>
+          <div class="swimlane-label">Screens</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell light"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div>
+          <div class="swimlane-label">Emotional curve</div>
+          <div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div><div class="swimlane-cell light"></div>
+          <div class="swimlane-label">Digital touchpoints</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div>
+          <div class="swimlane-label">Support & risks</div>
+          <div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div>
+          <div class="swimlane-label">Interview quotes</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div>
+        </div>
+        <p class="body-medium swimlane-caption">The real map spanned dozens of steps across screens, an emotional curve, channel touchpoints, support contacts, and interview quotes. Simplified and abstracted here for scale, not reproduced.</p>
+      </div>
+
+      <div class="emo-wrap">
+        <div class="emo-phases">
+          <span>BEING INFORMED</span><span>ACTIVATION</span><span>SETTLING IN</span>
+        </div>
+        <svg viewBox="0 0 800 140" style="width:100%; height:140px;">
+          <line x1="0" y1="70" x2="800" y2="70" stroke="var(--color-outline-variant)" stroke-dasharray="4 4"/>
+          <path d="M10,58 L130,62 L250,68 L252.8,70"
+                fill="none" stroke="#0B7A3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M252.8,70 L320,118 L420,108 L500,98 L600,80 L655.6,70"
+                fill="none" stroke="#B3261E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M655.6,70 L700,62 L790,50"
+                fill="none" stroke="#0B7A3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="320" cy="118" r="5" fill="#B3261E"/>
+          <circle cx="420" cy="108" r="5" fill="#B3261E"/>
+          <circle cx="600" cy="80" r="5" fill="#B3261E"/>
+        </svg>
+        <p class="body-medium" style="text-align:center; margin-top:4px;">Client sentiment across the migration. The steepest drop lands right at activation, then recovers over the following weeks as clients settle in.</p>
+      </div>
+
+      <div style="margin-top:20px;">
+        <span class="risk-chip"><span class="material-symbols-outlined">warning</span>Clients notice small fee or product differences and consider leaving. Mitigated with transparent, side-by-side comparisons before activation.</span>
+        <span class="risk-chip"><span class="material-symbols-outlined">warning</span>Downtime during cutover blocks digital banking entirely. Mitigated by capping downtime and scheduling it outside salary and bill-payment peaks.</span>
+        <span class="risk-chip"><span class="material-symbols-outlined">warning</span>Clients lose familiar support if advisors move on a different timeline than their clients. Mitigated by migrating client-facing staff ahead of the clients they support.</span>
+      </div>
+    </div>
+
+    <!-- INSIGHT TO ACTION -->
+    <div class="case-section">
+      <p class="label-large section-label">FROM INSIGHT TO ACTION</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Three examples of what changed</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px; margin-bottom:8px;">Every recommendation traced back to a specific client quote. Here are three that shaped the eventual design.</p>
+
+      <div class="principle-row">
+        <span class="principle-num">01</span>
+        <div><p class="title-medium">Before: one-stop communication</p><p class="body-medium">Bundle the timeline, required actions, and access details into a single consistent message repeated across letter, app, and branch, instead of several slightly different versions of the same news.</p></div>
+      </div>
+      <div class="principle-row">
+        <span class="principle-num">02</span>
+        <div><p class="title-medium">During: show clients their own context</p><p class="body-medium">Surface real-time account-balance matching and confirm transferred standing orders during the cutover, so clients aren't left guessing whether anything actually worked.</p></div>
+      </div>
+      <div class="principle-row">
+        <span class="principle-num">03</span>
+        <div><p class="title-medium">After: take the client by the hand</p><p class="body-medium">Offer a guided tour and contextual tips in the days after activation, since the first login is the start of settling in, not the end of the journey.</p></div>
+      </div>
+
+      <div class="note-box" style="margin-top:24px;">
+        <p class="label-large" style="margin-bottom:6px;">My contribution</p>
+        <p class="body-medium">Every one of these recommendations traces back to a specific interview transcript. I mapped each pain point to its supporting quote directly, then co-facilitated the workshop that prioritised them with Business and IT.</p>
+      </div>
+    </div>
+
+    <!-- OUTCOME -->
+    <div class="case-section">
+      <p class="label-large section-label">OUTCOME</p>
+      <h2 class="title-large" style="margin-bottom:16px;">What this made possible</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">The journey map became the shared reference point between Business, IT, and Design, replacing three different mental models of the migration with one realistic, evidence-based plan. It didn't just describe the client experience: it gave delivery teams a concrete brief to build against.</p>
+    </div>
+
+    <footer>
+      <div class="row">
+        <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Back to all work
+        </a>
+        <a href="mailto:tanya.raschle@gmail.com">Get in touch →</a>
+      </div>
+    </footer>
+  </div>
+</section>
+
 <!-- ============ TEASER: CYBERSECURITY ============ -->
 <section class="view" id="view-case-cyber">
   <div class="container">
@@ -639,7 +909,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
 </section>
 
 <script>
-var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/cyber':'view-case-cyber', '#/case/rail':'view-case-rail' };
+var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/migration':'view-case-migration', '#/case/cyber':'view-case-cyber', '#/case/rail':'view-case-rail' };
 
 function showView(id){
   var views = document.querySelectorAll('.view');
