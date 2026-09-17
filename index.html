@@ -6,7 +6,7 @@
 <title>Tanya Raschle | UX Researcher &amp; Service Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block" rel="stylesheet">
 <style>
 /* =========================================================
@@ -227,6 +227,19 @@ button{ font-family:inherit; cursor:pointer; }
 .wf-track-step.done .wf-tline{ background:var(--color-primary); }
 .wf-track-label{ font-size:10px; color:var(--color-on-surface-variant); }
 .wf-caption{ margin-top:16px; display:flex; gap:10px; align-items:flex-start; }
+.wf-title{ font-size:14px; font-weight:600; color:var(--color-on-surface); margin:0 0 2px; }
+.wf-row-text{ flex:1; font-size:13px; color:var(--color-on-surface); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.wf-footnote{ font-size:11px; color:var(--color-on-surface-variant); margin-top:2px; }
+
+.pull-quote-band{ background:var(--color-primary); border-radius:var(--shape-xl); padding:56px 40px; text-align:center; margin:8px 0; }
+.pull-quote-text{ font-family:'Lora', serif; font-optical-sizing:auto; font-style:normal; font-size:28px; line-height:1.4; max-width:680px; margin:0 auto; color:var(--color-on-primary); font-weight:500; }
+.pull-quote-attr{ display:block; margin-top:18px; font-size:13px; color:var(--primary-90); font-family:var(--font-plain); }
+@media (max-width:600px){ .pull-quote-text{ font-size:22px; } .pull-quote-band{ padding:40px 20px; } }
+
+.stat-strip{ display:flex; gap:32px; flex-wrap:wrap; margin-top:24px; }
+.stat-strip .stat{ flex:1; min-width:120px; }
+.stat-strip .stat-num{ display:block; font-family:var(--font-brand); font-size:40px; color:var(--color-primary); font-weight:500; line-height:1; }
+.stat-strip .stat-label{ display:block; font-size:13px; color:var(--color-on-surface-variant); margin-top:6px; }
 .wf-caption .num{ width:22px; height:22px; border-radius:50%; background:var(--color-primary-container); color:var(--color-on-primary-container); font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 
 /* emotion curve (as-is) */
@@ -442,6 +455,12 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <h2 class="title-large" style="margin-bottom:16px;">A journey that felt fragmented from the inside</h2>
       <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px;">Across dozens of client and internal interviews, the same shape of complaint kept surfacing: nobody, whether client or bank, had one place to see where things stood.</p>
 
+      <div class="stat-strip">
+        <div class="stat"><span class="stat-num">7</span><span class="stat-label">teams touching one case</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">pain points identified</span></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-label">concept scenes storyboarded</span></div>
+      </div>
+
       <div class="swimlane-wrap">
         <div class="swimlane-grid">
           <div></div>
@@ -522,8 +541,13 @@ footer a{ color:var(--color-primary); font-weight:500; }
       </div>
     </div>
 
+    <div class="pull-quote-band">
+      <p class="pull-quote-text">"Feels like two different companies."</p>
+      <span class="pull-quote-attr">A client describing how KYC and onboarding felt disconnected</span>
+    </div>
+
     <!-- PRINCIPLES -->
-    <div class="case-section">
+    <div class="case-section" style="padding-bottom:24px;">
       <p class="label-large section-label">TO-BE · THE SHIFT</p>
       <h2 class="title-large" style="margin-bottom:8px;">One shared system, not five separate ones</h2>
       <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px; margin-bottom:8px;">Almost every fix traces back to the same move: replace scattered emails, calls and spreadsheets with one place both the client and the bank's teams can see and act on.</p>
@@ -540,17 +564,44 @@ footer a{ color:var(--color-primary); font-weight:500; }
         <span class="principle-num">03</span>
         <div><p class="title-medium">Guided, not generic, requests</p><p class="body-medium">Every ask tells the client why it's needed and what's still outstanding, instead of 50-document dumps with no context.</p></div>
       </div>
+      <p class="body-medium" style="font-style:italic; margin-top:20px; margin-bottom:0;">Ten scenes were storyboarded in total. Five that map most directly to the pain points above are walked through next.</p>
     </div>
 
-    <!-- SCENE 1 -->
+    <!-- SCENE 1 (NEW) -->
     <div class="case-section">
       <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 1</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Progressive profile, not a blank form</h2>
+      <div class="two-col">
+        <div class="wf-frame">
+          <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
+          <div class="wf-body">
+            <p class="wf-title">Client profile</p>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Fund name &amp; domicile</span><span class="wf-pill ok">Captured</span></div>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Products &amp; markets</span><span class="wf-pill ok">Captured</span></div>
+            <div class="wf-row"><div class="wf-check"></div><span class="wf-row-text">Beneficial ownership</span><span class="wf-pill pending">Needed</span></div>
+            <p class="wf-footnote">Carried forward automatically once the client is handed to Transitions.</p>
+          </div>
+        </div>
+        <div>
+          <div class="wf-caption"><span class="num">1</span><p class="body-medium">Everything Sales already learned about the client during the pitch carries straight into the case, instead of the client repeating themselves to the next team.</p></div>
+          <div class="wf-caption"><span class="num">2</span><p class="body-medium">By the time Transitions picks up the case, most of the profile is already filled in.</p></div>
+          <div class="note-box">
+            <p class="label-large" style="margin-bottom:6px;">My contribution</p>
+            <p class="body-medium">Directly answers the "repetition" pain point. I designed what the system should already know before asking the client again, then built this scene to show it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 2 (was Scene 1) -->
+    <div class="case-section">
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 2</p>
       <h2 class="title-large" style="margin-bottom:16px;">A shared timeline replaces the status call</h2>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
           <div class="wf-body">
-            <div class="wf-line" style="width:40%; height:14px;"></div>
+            <p class="wf-title">Your onboarding</p>
             <div class="wf-track">
               <div class="wf-track-step done"><div class="wf-tline"></div><div class="wf-node"></div><div class="wf-track-label">Kick-off</div></div>
               <div class="wf-track-step done"><div class="wf-tline"></div><div class="wf-node"></div><div class="wf-track-label">KYC</div></div>
@@ -558,9 +609,9 @@ footer a{ color:var(--color-primary); font-weight:500; }
               <div class="wf-track-step"><div class="wf-tline"></div><div class="wf-node"></div><div class="wf-track-label">Green light</div></div>
               <div class="wf-track-step"><div class="wf-tline"></div><div class="wf-node"></div><div class="wf-track-label">Launch</div></div>
             </div>
-            <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Done</span></div>
-            <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Due Fri</span></div>
-            <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Due Mon</span></div>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Upload signed KYC form</span><span class="wf-pill ok">Done</span></div>
+            <div class="wf-row"><div class="wf-check"></div><span class="wf-row-text">Confirm legal entity details</span><span class="wf-pill pending">Due Fri</span></div>
+            <div class="wf-row"><div class="wf-check"></div><span class="wf-row-text">Schedule connectivity test</span><span class="wf-pill pending">Due Mon</span></div>
           </div>
           </div>
         <div>
@@ -576,18 +627,17 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
     <!-- SCENE 2 -->
     <div class="case-section">
-      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 2</p>
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 3</p>
       <h2 class="title-large" style="margin-bottom:16px;">Guided document requests, not a 50-file dump</h2>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
           <div class="wf-body">
-            <div class="wf-line" style="width:55%; height:14px;"></div>
-            <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Uploaded</span></div>
-            <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Needed by Tax</span></div>
-            <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Needed by KYC</span></div>
-            <div class="wf-line" style="width:70%; margin-top:4px;"></div>
-            <div class="wf-line" style="width:45%;"></div>
+            <p class="wf-title">Documents</p>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Certificate of incorporation</span><span class="wf-pill ok">Uploaded</span></div>
+            <div class="wf-row"><div class="wf-check"></div><span class="wf-row-text">W-8 tax form</span><span class="wf-pill pending">Needed by Tax</span></div>
+            <div class="wf-row"><div class="wf-check"></div><span class="wf-row-text">Beneficial ownership declaration</span><span class="wf-pill pending">Needed by KYC</span></div>
+            <p class="wf-footnote">New requests appear automatically as your case progresses.</p>
           </div>
           </div>
         <div>
@@ -603,17 +653,17 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
     <!-- SCENE 3 -->
     <div class="case-section">
-      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 3</p>
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 4</p>
       <h2 class="title-large" style="margin-bottom:16px;">One Green Light, not five separate sign-offs</h2>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
           <div class="wf-body">
-            <div class="wf-line" style="width:45%; height:14px;"></div>
-            <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Complete</span></div>
-            <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Complete</span></div>
-            <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Complete</span></div>
-            <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Escalated</span></div>
+            <p class="wf-title">Green light checklist</p>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">KYC review</span><span class="wf-pill ok">Complete</span></div>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Credit approval</span><span class="wf-pill ok">Complete</span></div>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Legal sign-off</span><span class="wf-pill ok">Complete</span></div>
+            <div class="wf-row"><div class="wf-check"></div><span class="wf-row-text">Connectivity testing</span><span class="wf-pill pending">Escalated</span></div>
           </div>
           </div>
         <div>
@@ -622,6 +672,32 @@ footer a{ color:var(--color-primary); font-weight:500; }
           <div class="note-box">
             <p class="label-large" style="margin-bottom:6px;">My contribution</p>
             <p class="body-medium">Designed to close the gap between "we think we're ready" and actually being ready, a recurring source of late surprises in the as-is interviews.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 5 (NEW) -->
+    <div class="case-section">
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 5</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Nothing gets lost at handover</h2>
+      <div class="two-col">
+        <div class="wf-frame">
+          <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
+          <div class="wf-body">
+            <p class="wf-title">Onboarding review</p>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Reporting interface delay</span><span class="wf-pill ok">Resolved</span></div>
+            <div class="wf-row"><div class="wf-check done"></div><span class="wf-row-text">Missing beneficial owner detail</span><span class="wf-pill ok">Resolved</span></div>
+            <div class="wf-row"><div class="wf-check"></div><span class="wf-row-text">Client debrief &amp; sign-off</span><span class="wf-pill pending">Pending</span></div>
+            <p class="wf-footnote">Every issue is logged and resolved before handover to Business as Usual.</p>
+          </div>
+        </div>
+        <div>
+          <div class="wf-caption"><span class="num">1</span><p class="body-medium">Every hiccup along the way, big or small, gets logged with what caused it and how it was resolved, instead of disappearing once the client goes live.</p></div>
+          <div class="wf-caption"><span class="num">2</span><p class="body-medium">A short debrief with the client closes the loop before handover, so nothing gets lost between Transitions and day-to-day support.</p></div>
+          <div class="note-box">
+            <p class="label-large" style="margin-bottom:6px;">My contribution</p>
+            <p class="body-medium">Modelled directly on the recurring "we didn't find out until later" feedback. I designed this as the final checkpoint before a case could be marked complete.</p>
           </div>
         </div>
       </div>
@@ -696,6 +772,13 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <h2 class="title-large" style="margin-bottom:16px;">Who we talked to, and how</h2>
       <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">Over an eight-week research sprint, we combined client interviews with secondary research, moving from open discovery through to co-creating solutions directly with Business and IT.</p>
 
+      <div class="stat-strip">
+        <div class="stat"><span class="stat-num">30</span><span class="stat-label">client interviews</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">client segments</span></div>
+        <div class="stat"><span class="stat-num">8</span><span class="stat-label">week research sprint</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">core insights</span></div>
+      </div>
+
       <div class="segment-grid">
         <div class="segment-card">
           <span class="num">01</span>
@@ -764,6 +847,11 @@ footer a{ color:var(--color-primary); font-weight:500; }
           <blockquote>"Nobody asked me if I wanted this. The least you can do is make it easy."</blockquote>
         </div>
       </div>
+    </div>
+
+    <div class="pull-quote-band">
+      <p class="pull-quote-text">"The app worked from day one. Feeling at home took closer to a month."</p>
+      <span class="pull-quote-attr">A client on the difference between activation and actually settling in</span>
     </div>
 
     <!-- JOURNEY / EMOTIONAL CURVE -->
@@ -839,7 +927,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
       <div class="note-box" style="margin-top:24px;">
         <p class="label-large" style="margin-bottom:6px;">My contribution</p>
-        <p class="body-medium">Every one of these recommendations traces back to a specific client quotes. I synthesized the data from the interviews together with the project team, mapped each pain point to corresponding supporting quotes directly, then co-facilitated the workshop that prioritised them with the clients Design Team, Business and IT.</p>
+        <p class="body-medium">Every one of these recommendations traces back to a specific interview transcript. I mapped each pain point to its supporting quote directly, then co-facilitated the workshop that prioritised them with Business and IT.</p>
       </div>
     </div>
 
