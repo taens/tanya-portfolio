@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block" rel="stylesheet">
 <style>
 /* =========================================================
    DESIGN TOKENS — values pulled directly from Google's
@@ -94,7 +95,15 @@ button{ font-family:inherit; cursor:pointer; }
   max-width:920px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between;
 }
 .appbar-back{ display:flex; align-items:center; gap:8px; color:var(--color-primary); }
-.appbar-back svg{ width:18px; height:18px; }
+.material-symbols-outlined{
+  font-family:'Material Symbols Outlined';
+  font-weight:normal; font-style:normal; line-height:1; letter-spacing:normal; text-transform:none;
+  display:inline-block; white-space:nowrap; word-wrap:normal; direction:ltr;
+  -webkit-font-feature-settings:'liga'; -webkit-font-smoothing:antialiased; vertical-align:middle;
+}
+.appbar-back .material-symbols-outlined{ font-size:18px; }
+.card-arrow .material-symbols-outlined{ font-size:16px; }
+.back-link .material-symbols-outlined{ font-size:16px; }
 .chip{
   display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:var(--shape-full);
   border:1px solid var(--color-outline); font-size:13px; font-weight:500; color:var(--color-on-surface-variant);
@@ -138,7 +147,6 @@ button{ font-family:inherit; cursor:pointer; }
 .card-teaser{ padding:28px; display:flex; flex-direction:column; gap:12px; min-height:180px; }
 .card-teaser .card-tag{ background:var(--color-tertiary-container); color:var(--color-on-tertiary-container); }
 .card-arrow{ margin-top:auto; display:flex; align-items:center; gap:6px; color:var(--color-primary); font-size:14px; font-weight:500; }
-.card-arrow svg{ width:16px; height:16px; }
 @media (max-width:720px){
   .card-featured{ grid-template-columns:1fr; }
   .teaser-row{ grid-template-columns:1fr; }
@@ -212,9 +220,24 @@ footer .row{ display:flex; justify-content:space-between; align-items:center; fl
 footer a{ color:var(--color-primary); font-weight:500; }
 
 .back-link{ display:inline-flex; align-items:center; gap:6px; color:var(--color-primary); font-weight:500; margin-bottom:28px; }
-.back-link svg{ width:16px; height:16px; }
 
 .note-box{ background:var(--color-surface-container); border-radius:var(--shape-lg); padding:20px 24px; margin-top:8px; }
+
+/* ---------- Swimlane complexity diagram (as-is) ---------- */
+.swimlane-wrap{ background:var(--color-surface-container-low); border-radius:var(--shape-lg); padding:24px; margin-top:24px; overflow-x:auto; }
+.swimlane-grid{ display:grid; grid-template-columns:132px repeat(6,1fr); gap:5px; min-width:620px; }
+.swimlane-head{ font-size:10px; font-weight:600; letter-spacing:0.3px; color:var(--color-on-surface-variant); text-align:center; padding-bottom:6px; }
+.swimlane-label{ font-size:12px; font-weight:500; color:var(--color-on-surface); display:flex; align-items:center; padding-right:6px; }
+.swimlane-cell{ height:22px; border-radius:5px; background:var(--color-surface-variant); }
+.swimlane-cell.light{ background:var(--color-primary-container); }
+.swimlane-cell.heavy{ background:var(--color-primary); }
+.swimlane-caption{ margin-top:14px; }
+
+/* ---------- Scene layout: illustration beside wireframe ---------- */
+.scene-media{ display:flex; gap:16px; align-items:flex-start; }
+.scene-illustration{ flex-shrink:0; width:92px; height:129px; display:block; }
+@media (max-width:560px){ .scene-illustration{ width:56px; height:78px; } }
+.scene-media .wf-frame{ flex:1; min-width:0; }
 </style>
 </head>
 <body>
@@ -251,7 +274,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
             <h2 class="title-large">Client Onboarding, Reimagined</h2>
             <p class="body-medium">Mapping a fragmented, multi-team onboarding journey for a global investment bank's Prime Brokerage division, then storyboarding the connected system that could replace it.</p>
             <span class="card-arrow">View case study
-              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="material-symbols-outlined">arrow_forward</span>
             </span>
           </div>
           <div class="card-visual">
@@ -273,7 +296,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
             <h3 class="title-medium">Cybersecurity Insurance, Made Relatable</h3>
             <p class="body-medium">Testing the desirability of new cyber-insurance concepts against how people actually feel about digital risk.</p>
             <span class="card-arrow">Read more
-              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="material-symbols-outlined">arrow_forward</span>
             </span>
           </a>
           <a class="card card-teaser" href="#/case/rail" tabindex="0" onclick="return go('view-case-rail','/case/rail')">
@@ -281,7 +304,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
             <h3 class="title-medium">Understanding Employee Mindsets</h3>
             <p class="body-medium">Shifting a national railway's technology rollout from a technical project to an employee-centred one.</p>
             <span class="card-arrow">Read more
-              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="material-symbols-outlined">arrow_forward</span>
             </span>
           </a>
         </div>
@@ -303,7 +326,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
   <div class="container">
     <div class="case-hero">
       <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin-top:24px;">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="material-symbols-outlined">arrow_back</span>
         All work
       </a>
       <span class="card-tag">Service Design · UX Research · Dec 2021</span>
@@ -333,6 +356,10 @@ footer a{ color:var(--color-primary); font-weight:500; }
               <p class="title-medium">Concept design &amp; storyboarding</p>
               <p class="body-medium">Led the to-be concept direction and storyboarded it scene-by-scene so both client-facing and internal teams could see how it would feel in practice.</p>
             </li>
+            <li>
+              <p class="title-medium">Stakeholder alignment</p>
+              <p class="body-medium">Helped present the finished storyboard back to client and internal stakeholders — using it to build alignment around the direction, not just explain it.</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -343,6 +370,35 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <p class="label-large section-label">AS-IS · WHAT WE FOUND</p>
       <h2 class="title-large" style="margin-bottom:16px;">A journey that felt fragmented from the inside</h2>
       <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px;">Across dozens of client and internal interviews, the same shape of complaint kept surfacing: nobody — client or bank — had one place to see where things stood.</p>
+
+      <div class="swimlane-wrap">
+        <div class="swimlane-grid">
+          <div></div>
+          <div class="swimlane-head">PRE-ONBOARD</div><div class="swimlane-head">KICK-OFF</div><div class="swimlane-head">KYC / CREDIT / LEGAL</div><div class="swimlane-head">CONNECTIVITY</div><div class="swimlane-head">LAUNCH</div><div class="swimlane-head">BAU</div>
+
+          <div class="swimlane-label">Sales &amp; Consulting</div>
+          <div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div>
+
+          <div class="swimlane-label">Transitions</div>
+          <div class="swimlane-cell light"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div>
+
+          <div class="swimlane-label">Credit Risk</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div>
+
+          <div class="swimlane-label">KYC</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div>
+
+          <div class="swimlane-label">Legal</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell"></div>
+
+          <div class="swimlane-label">Connectivity</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell light"></div>
+
+          <div class="swimlane-label">Client Services</div>
+          <div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell"></div><div class="swimlane-cell light"></div><div class="swimlane-cell heavy"></div><div class="swimlane-cell heavy"></div>
+        </div>
+        <p class="body-medium swimlane-caption">Simplified from the full service blueprint — seven teams touch a single onboarding case, often overlapping. That overlap, more than any one team's workload, is what made the process feel unowned.</p>
+      </div>
 
       <div class="emo-wrap">
         <div class="emo-phases">
@@ -371,9 +427,24 @@ footer a{ color:var(--color-primary); font-weight:500; }
           <p class="body-medium">Teams operated on separate document trails — nothing carried over from Sales to KYC to Legal.</p>
         </div>
         <div class="pain-card">
+          <span class="tag-mini">No prioritization</span>
+          <p class="body-large" style="font-weight:500;">Everything arrived marked urgent.</p>
+          <p class="body-medium">50+ documents could land at once with no signal on what was blocking versus simply informational.</p>
+        </div>
+        <div class="pain-card">
+          <span class="tag-mini">Fragmented ownership</span>
+          <p class="body-large" style="font-weight:500;">"Feels like two different companies."</p>
+          <p class="body-medium">KYC and onboarding teams didn't share context — clients felt handed between firms, not departments.</p>
+        </div>
+        <div class="pain-card">
           <span class="tag-mini">Late signal</span>
           <p class="body-large" style="font-weight:500;">Account numbers arrived too late to test.</p>
           <p class="body-medium">Clients couldn't start their own technical setup until deep into the process, compressing the runway to launch.</p>
+        </div>
+        <div class="pain-card">
+          <span class="tag-mini">Inconsistent formats</span>
+          <p class="body-large" style="font-weight:500;">Every team reported differently.</p>
+          <p class="body-medium">Inconsistent naming conventions across reports meant manual rework even after go-live.</p>
         </div>
       </div>
     </div>
@@ -403,7 +474,17 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <p class="label-large section-label">CONCEPT WALKTHROUGH — SCENE 1</p>
       <h2 class="title-large" style="margin-bottom:16px;">A shared timeline replaces the status call</h2>
       <div class="two-col">
-        <div class="wf-frame">
+        <div class="scene-media">
+          <svg class="scene-illustration" viewBox="0 0 100 140">
+            <rect x="10" y="95" width="80" height="8" rx="3" fill="var(--color-outline-variant)"/>
+            <rect x="35" y="55" width="30" height="22" rx="3" fill="none" stroke="var(--color-primary)" stroke-width="3"/>
+            <line x1="50" y1="77" x2="50" y2="90" stroke="var(--color-primary)" stroke-width="3"/>
+            <circle cx="20" cy="70" r="9" fill="var(--color-secondary-container)" stroke="var(--color-secondary)" stroke-width="2.5"/>
+            <path d="M8,96 Q20,78 32,96" fill="var(--color-secondary-container)" stroke="var(--color-secondary)" stroke-width="2.5"/>
+            <circle cx="80" cy="70" r="9" fill="var(--color-tertiary-container)" stroke="var(--color-tertiary)" stroke-width="2.5"/>
+            <path d="M68,96 Q80,78 92,96" fill="var(--color-tertiary-container)" stroke="var(--color-tertiary)" stroke-width="2.5"/>
+          </svg>
+          <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
           <div class="wf-body">
             <div class="wf-line" style="width:40%; height:14px;"></div>
@@ -417,6 +498,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
             <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Done</span></div>
             <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Due Fri</span></div>
             <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Due Mon</span></div>
+          </div>
           </div>
         </div>
         <div>
@@ -435,7 +517,17 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <p class="label-large section-label">CONCEPT WALKTHROUGH — SCENE 2</p>
       <h2 class="title-large" style="margin-bottom:16px;">Guided document requests, not a 50-file dump</h2>
       <div class="two-col">
-        <div class="wf-frame">
+        <div class="scene-media">
+          <svg class="scene-illustration" viewBox="0 0 100 140">
+            <circle cx="50" cy="98" r="10" fill="var(--color-secondary-container)" stroke="var(--color-secondary)" stroke-width="2.5"/>
+            <path d="M35,128 Q50,108 65,128" fill="var(--color-secondary-container)" stroke="var(--color-secondary)" stroke-width="2.5"/>
+            <rect x="34" y="28" width="32" height="40" rx="4" fill="none" stroke="var(--color-primary)" stroke-width="3"/>
+            <line x1="41" y1="40" x2="59" y2="40" stroke="var(--color-primary)" stroke-width="2.5"/>
+            <line x1="41" y1="48" x2="59" y2="48" stroke="var(--color-primary)" stroke-width="2.5"/>
+            <line x1="41" y1="56" x2="52" y2="56" stroke="var(--color-primary)" stroke-width="2.5"/>
+            <path d="M50,86 L50,72 M43,79 L50,70 L57,79" fill="none" stroke="var(--color-tertiary)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
           <div class="wf-body">
             <div class="wf-line" style="width:55%; height:14px;"></div>
@@ -444,6 +536,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
             <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Needed by KYC</span></div>
             <div class="wf-line" style="width:70%; margin-top:4px;"></div>
             <div class="wf-line" style="width:45%;"></div>
+          </div>
           </div>
         </div>
         <div>
@@ -462,7 +555,14 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <p class="label-large section-label">CONCEPT WALKTHROUGH — SCENE 3</p>
       <h2 class="title-large" style="margin-bottom:16px;">One Green Light, not five separate sign-offs</h2>
       <div class="two-col">
-        <div class="wf-frame">
+        <div class="scene-media">
+          <svg class="scene-illustration" viewBox="0 0 100 140">
+            <circle cx="50" cy="102" r="10" fill="var(--color-secondary-container)" stroke="var(--color-secondary)" stroke-width="2.5"/>
+            <path d="M35,132 Q50,112 65,132" fill="var(--color-secondary-container)" stroke="var(--color-secondary)" stroke-width="2.5"/>
+            <circle cx="50" cy="46" r="23" fill="var(--color-success-container)" stroke="var(--color-primary)" stroke-width="3"/>
+            <path d="M38,47 L46,55 L63,36" fill="none" stroke="var(--color-on-success-container)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
           <div class="wf-body">
             <div class="wf-line" style="width:45%; height:14px;"></div>
@@ -470,6 +570,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
             <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Complete</span></div>
             <div class="wf-row"><div class="wf-check done"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill ok">Complete</span></div>
             <div class="wf-row"><div class="wf-check"></div><div class="wf-line" style="flex:1; width:auto;"></div><span class="wf-pill pending">Escalated</span></div>
+          </div>
           </div>
         </div>
         <div>
@@ -493,7 +594,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
     <footer>
       <div class="row">
         <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="material-symbols-outlined">arrow_back</span>
           Back to all work
         </a>
         <a href="mailto:tanya.raschle@gmail.com">Get in touch →</a>
@@ -507,7 +608,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
   <div class="container">
     <div class="case-hero">
       <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin-top:24px;">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="material-symbols-outlined">arrow_back</span>
         All work
       </a>
       <span class="card-tag">Concept Testing · Jun 2022</span>
@@ -522,7 +623,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
         <p class="body-medium">This case study's detailed process and concept visuals are still being prepared for public sharing. Happy to walk through it directly — reach out below.</p>
       </div>
     </div>
-    <footer><div class="row"><a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;"><svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to all work</a><a href="mailto:tanya.raschle@gmail.com">Get in touch →</a></div></footer>
+    <footer><div class="row"><a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;"><span class="material-symbols-outlined">arrow_back</span>Back to all work</a><a href="mailto:tanya.raschle@gmail.com">Get in touch →</a></div></footer>
   </div>
 </section>
 
@@ -531,7 +632,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
   <div class="container">
     <div class="case-hero">
       <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin-top:24px;">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="material-symbols-outlined">arrow_back</span>
         All work
       </a>
       <span class="card-tag">Exploratory Research · Oct 2022</span>
@@ -546,7 +647,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
         <p class="body-medium">This case study's detailed process and concept visuals are still being prepared for public sharing. Happy to walk through it directly — reach out below.</p>
       </div>
     </div>
-    <footer><div class="row"><a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;"><svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to all work</a><a href="mailto:tanya.raschle@gmail.com">Get in touch →</a></div></footer>
+    <footer><div class="row"><a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;"><span class="material-symbols-outlined">arrow_back</span>Back to all work</a><a href="mailto:tanya.raschle@gmail.com">Get in touch →</a></div></footer>
   </div>
 </section>
 
