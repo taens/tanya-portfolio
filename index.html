@@ -198,6 +198,15 @@ button{ font-family:inherit; cursor:pointer; }
 .insight-card{ background:var(--color-surface-container); border-radius:var(--shape-lg); padding:20px 22px; }
 .insight-card .num{ font-family:var(--font-brand); font-size:20px; color:var(--color-primary); }
 .insight-card blockquote{ margin:10px 0 0; padding-left:12px; border-left:3px solid var(--color-primary-container); font-style:italic; color:var(--color-on-surface-variant); font-size:14px; }
+
+.scene-answers{ font-size:12px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--color-tertiary); margin:2px 0 20px; }
+
+.case-outline{ display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:24px; font-size:13px; color:var(--color-on-surface-variant); }
+.case-outline .step{ font-weight:500; }
+.case-outline .sep{ color:var(--color-outline); }
+@media (max-width:600px){ .case-outline{ font-size:12px; } }
+
+.connective-cue{ font-size:13px; font-weight:600; letter-spacing:0.2px; color:var(--color-primary); margin:28px 0 4px; text-transform:uppercase; }
 .pain-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:28px; }
 @media (max-width:720px){ .pain-grid{ grid-template-columns:1fr; } }
 
@@ -433,6 +442,13 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <span class="card-tag">UX Research · Service Design · Dec 2021</span>
       <h1 class="headline-large">Client Onboarding, Reimagined</h1>
       <p class="body-large">A global investment bank's Prime Brokerage division onboards hedge funds and asset managers through a multi-month process spanning Sales, Credit Risk, KYC, Legal, and Connectivity teams. I mapped how that process actually felt from the inside, then storyboarded a connected system to fix it.</p>
+      <div class="case-outline">
+        <span class="step">Context &amp; role</span><span class="sep">→</span>
+        <span class="step">What we found</span><span class="sep">→</span>
+        <span class="step">The shift</span><span class="sep">→</span>
+        <span class="step">5 concept scenes</span><span class="sep">→</span>
+        <span class="step">Outcome</span>
+      </div>
     </div>
 
     <!-- CONTEXT & ROLE -->
@@ -478,6 +494,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
         <div class="stat"><span class="stat-num">10</span><span class="stat-label">concept scenes storyboarded</span></div>
       </div>
 
+      <p class="connective-cue">Here's what that looked like in practice</p>
       <div class="swimlane-wrap">
         <div class="swimlane-grid">
           <div></div>
@@ -524,6 +541,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
         <p class="body-medium" style="text-align:center; margin-top:4px;">Client sentiment over the course of onboarding. The dips cluster hard around KYC, Legal, and testing.</p>
       </div>
 
+      <p class="connective-cue">And here's what it actually felt like</p>
       <div class="pain-grid">
         <div class="pain-card">
           <span class="tag-mini">No visibility</span>
@@ -586,8 +604,9 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
     <!-- SCENE 1 (NEW) -->
     <div class="case-section">
-      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 1</p>
-      <h2 class="title-large" style="margin-bottom:16px;">Progressive profile, not a blank form</h2>
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 1 OF 5</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Progressive profile, not a blank form</h2>
+      <p class="scene-answers">Answers: Repetition</p>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
@@ -612,8 +631,9 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
     <!-- SCENE 2 (was Scene 1) -->
     <div class="case-section">
-      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 2</p>
-      <h2 class="title-large" style="margin-bottom:16px;">A shared timeline replaces the status call</h2>
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 2 OF 5</p>
+      <h2 class="title-large" style="margin-bottom:8px;">A shared timeline replaces the status call</h2>
+      <p class="scene-answers">Answers: No visibility</p>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
@@ -644,8 +664,9 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
     <!-- SCENE 2 -->
     <div class="case-section">
-      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 3</p>
-      <h2 class="title-large" style="margin-bottom:16px;">Guided document requests, not a 50-file dump</h2>
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 3 OF 5</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Guided document requests, not a 50-file dump</h2>
+      <p class="scene-answers">Answers: No prioritization</p>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
@@ -670,8 +691,9 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
     <!-- SCENE 3 -->
     <div class="case-section">
-      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 4</p>
-      <h2 class="title-large" style="margin-bottom:16px;">One Green Light, not five separate sign-offs</h2>
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 4 OF 5</p>
+      <h2 class="title-large" style="margin-bottom:8px;">One Green Light, not five separate sign-offs</h2>
+      <p class="scene-answers">Answers: Late signal</p>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
@@ -696,8 +718,9 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
     <!-- SCENE 5 (NEW) -->
     <div class="case-section">
-      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 5</p>
-      <h2 class="title-large" style="margin-bottom:16px;">Nothing gets lost at handover</h2>
+      <p class="label-large section-label">CONCEPT WALKTHROUGH · SCENE 5 OF 5</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Nothing gets lost at handover</h2>
+      <p class="scene-answers">Answers: Fragmented ownership</p>
       <div class="two-col">
         <div class="wf-frame">
           <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
@@ -750,6 +773,14 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <span class="card-tag">UX Research · Journey Mapping</span>
       <h1 class="headline-large">Migrating Without Losing Trust</h1>
       <p class="body-large">When a global bank acquired another, hundreds of thousands of retail clients had to be migrated onto new accounts, apps, and products, whether they'd asked for it or not. I led the research that uncovered what that actually felt like for them, then turned it into a journey map that aligned Business, IT, and Design around a single, realistic plan.</p>
+      <div class="case-outline">
+        <span class="step">Context &amp; role</span><span class="sep">→</span>
+        <span class="step">Research approach</span><span class="sep">→</span>
+        <span class="step">What we heard</span><span class="sep">→</span>
+        <span class="step">The journey</span><span class="sep">→</span>
+        <span class="step">Insight to action</span><span class="sep">→</span>
+        <span class="step">Outcome</span>
+      </div>
     </div>
 
     <!-- CONTEXT & ROLE -->
@@ -916,6 +947,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
         <p class="body-medium" style="text-align:center; margin-top:4px;">Client sentiment across the migration. The steepest drop lands right at activation, then recovers over the following weeks as clients settle in.</p>
       </div>
 
+      <p class="connective-cue">A few risks needed active mitigation along the way</p>
       <div style="margin-top:20px;">
         <span class="risk-chip"><span class="material-symbols-outlined" aria-hidden="true">warning</span>Clients notice small fee or product differences and consider leaving. Mitigated with transparent, side-by-side comparisons before activation.</span>
         <span class="risk-chip"><span class="material-symbols-outlined" aria-hidden="true">warning</span>Downtime during cutover blocks digital banking entirely. Mitigated by capping downtime and scheduling it outside salary and bill-payment peaks.</span>
