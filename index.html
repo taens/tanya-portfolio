@@ -204,6 +204,12 @@ button{ font-family:inherit; cursor:pointer; }
 .decision-tag.tweak{ color:#8A6D00; }
 .decision-tag.kill{ color:#B3261E; }
 
+.hyp-list{ margin-top:20px; max-width:680px; }
+.hyp-item{ display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid var(--color-outline-variant); }
+.hyp-item:last-child{ border-bottom:none; }
+.hyp-item .material-symbols-outlined{ color:#0B7A3D; font-size:22px; flex-shrink:0; margin-top:1px; }
+.hyp-item p{ margin:0; }
+
 .case-outline{ display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:24px; font-size:13px; color:var(--color-on-surface-variant); }
 .case-outline .step{ font-weight:500; }
 .case-outline .sep{ color:var(--color-outline); }
@@ -343,11 +349,11 @@ footer a{ color:var(--color-primary); font-weight:500; }
       <p class="label-large section-label">SELECTED WORK</p>
       <div class="work-grid">
 
-        <a class="card card-featured" href="#/case/ib" tabindex="0" onclick="return go('view-case-ib','/case/ib')">
+        <a class="card card-featured" href="#/case/pf" tabindex="0" onclick="return go('view-case-pf','/case/pf')">
           <div class="card-copy">
-            <span class="card-tag">UX Research · Service Design</span>
-            <h2 class="title-large">Client Onboarding, Reimagined</h2>
-            <p class="body-medium">Mapping a fragmented, multi-team onboarding journey for a global investment bank's Prime Brokerage division, then storyboarding the connected system that could replace it.</p>
+            <span class="card-tag">UX Research · Strategy</span>
+            <h2 class="title-large">Making Customer Centricity Everyone's Job</h2>
+            <p class="body-medium">Helping a Swiss financial institution turn an abstract idea of "customer centricity" into a shared vision, a prioritisation model, and eventually a dedicated CX team.</p>
             <span class="card-arrow">View case study
               <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </span>
@@ -355,12 +361,21 @@ footer a{ color:var(--color-primary); font-weight:500; }
           <div class="card-visual">
             <svg viewBox="0 0 200 140" width="220">
               <rect x="0" y="0" width="200" height="140" rx="16" fill="#EADDFF"/>
-              <rect x="20" y="20" width="70" height="8" rx="4" fill="#6750A4" opacity="0.5"/>
-              <rect x="20" y="36" width="110" height="8" rx="4" fill="#6750A4" opacity="0.3"/>
-              <circle cx="30" cy="80" r="6" fill="#6750A4"/>
-              <circle cx="90" cy="60" r="6" fill="#6750A4" opacity="0.6"/>
-              <circle cx="150" cy="95" r="6" fill="#6750A4" opacity="0.6"/>
-              <path d="M30 80 L90 60 L150 95" stroke="#6750A4" stroke-width="2" fill="none"/>
+              <g opacity="0.9">
+                <rect x="25" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="58" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="91" y="20" width="28" height="20" rx="3" fill="#6750A4"/>
+                <rect x="124" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="25" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="58" y="45" width="28" height="20" rx="3" fill="#6750A4"/>
+                <rect x="91" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="124" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="25" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="58" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="91" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="124" y="70" width="28" height="20" rx="3" fill="#6750A4"/>
+              </g>
+              <rect x="25" y="100" width="127" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
             </svg>
           </div>
         </a>
@@ -389,11 +404,11 @@ footer a{ color:var(--color-primary); font-weight:500; }
           </div>
         </a>
 
-        <a class="card card-featured" href="#/case/pf" tabindex="0" onclick="return go('view-case-pf','/case/pf')">
+        <a class="card card-featured" href="#/case/ib" tabindex="0" onclick="return go('view-case-ib','/case/ib')">
           <div class="card-copy">
-            <span class="card-tag">UX Research · Strategy</span>
-            <h2 class="title-large">Making Customer Centricity Everyone's Job</h2>
-            <p class="body-medium">Helping a Swiss financial institution turn an abstract idea of "customer centricity" into a shared vision, a prioritisation model, and eventually a dedicated CX team.</p>
+            <span class="card-tag">UX Research · Service Design</span>
+            <h2 class="title-large">Client Onboarding, Reimagined</h2>
+            <p class="body-medium">Mapping a fragmented, multi-team onboarding journey for a global investment bank's Prime Brokerage division, then storyboarding the connected system that could replace it.</p>
             <span class="card-arrow">View case study
               <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </span>
@@ -401,21 +416,12 @@ footer a{ color:var(--color-primary); font-weight:500; }
           <div class="card-visual">
             <svg viewBox="0 0 200 140" width="220">
               <rect x="0" y="0" width="200" height="140" rx="16" fill="#EADDFF"/>
-              <g opacity="0.9">
-                <rect x="25" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="58" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="91" y="20" width="28" height="20" rx="3" fill="#6750A4"/>
-                <rect x="124" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="25" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="58" y="45" width="28" height="20" rx="3" fill="#6750A4"/>
-                <rect x="91" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="124" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="25" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="58" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="91" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
-                <rect x="124" y="70" width="28" height="20" rx="3" fill="#6750A4"/>
-              </g>
-              <rect x="25" y="100" width="127" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
+              <rect x="20" y="20" width="70" height="8" rx="4" fill="#6750A4" opacity="0.5"/>
+              <rect x="20" y="36" width="110" height="8" rx="4" fill="#6750A4" opacity="0.3"/>
+              <circle cx="30" cy="80" r="6" fill="#6750A4"/>
+              <circle cx="90" cy="60" r="6" fill="#6750A4" opacity="0.6"/>
+              <circle cx="150" cy="95" r="6" fill="#6750A4" opacity="0.6"/>
+              <path d="M30 80 L90 60 L150 95" stroke="#6750A4" stroke-width="2" fill="none"/>
             </svg>
           </div>
         </a>
@@ -453,24 +459,29 @@ footer a{ color:var(--color-primary); font-weight:500; }
           </div>
         </a>
 
-        <div class="teaser-row">
-          <a class="card card-teaser" href="#/case/cyber" tabindex="0" onclick="return go('view-case-cyber','/case/cyber')">
-            <span class="card-tag">Concept Testing</span>
-            <h3 class="title-medium">Cybersecurity Insurance, Made Relatable</h3>
-            <p class="body-medium">Testing the desirability of new cyber-insurance concepts against how people actually feel about digital risk.</p>
-            <span class="card-arrow">Read more
+        <a class="card card-featured" href="#/case/cyber" tabindex="0" onclick="return go('view-case-cyber','/case/cyber')">
+          <div class="card-copy">
+            <span class="card-tag">UX Research · Concept Testing</span>
+            <h2 class="title-large">Cybersecurity Insurance, Made Relatable</h2>
+            <p class="body-medium">Testing the desirability of new cyber-insurance concepts against how people actually feel about digital risk, not just how they answer a survey about it.</p>
+            <span class="card-arrow">View case study
               <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </span>
-          </a>
-          <a class="card card-teaser" href="#/case/rail" tabindex="0" onclick="return go('view-case-rail','/case/rail')">
-            <span class="card-tag">Exploratory Research</span>
-            <h3 class="title-medium">Understanding Employee Mindsets</h3>
-            <p class="body-medium">Shifting a national railway's technology rollout from a technical project to an employee-centred one.</p>
-            <span class="card-arrow">Read more
-              <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-            </span>
-          </a>
-        </div>
+          </div>
+          <div class="card-visual">
+            <svg viewBox="0 0 200 140" width="220">
+              <rect x="0" y="0" width="200" height="140" rx="16" fill="#EADDFF"/>
+              <line x1="100" y1="20" x2="100" y2="120" stroke="#6750A4" stroke-width="1.5" opacity="0.3"/>
+              <line x1="30" y1="70" x2="170" y2="70" stroke="#6750A4" stroke-width="1.5" opacity="0.3"/>
+              <circle cx="60" cy="42" r="9" fill="#6750A4" opacity="0.85"/>
+              <circle cx="138" cy="48" r="7" fill="#6750A4" opacity="0.5"/>
+              <circle cx="55" cy="95" r="6" fill="#6750A4" opacity="0.3"/>
+              <circle cx="145" cy="98" r="8" fill="#6750A4" opacity="0.65"/>
+              <rect x="18" y="120" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
+              <rect x="135" y="120" width="40" height="7" rx="3" fill="#6750A4"/>
+            </svg>
+          </div>
+        </a>
 
       </div>
       <div style="margin-top:28px; border-top:1px solid var(--color-outline-variant); border-bottom:1px solid var(--color-outline-variant); padding:20px 0;">
@@ -1063,7 +1074,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
 
       <div class="note-box" style="margin-top:24px;">
         <p class="label-large" style="margin-bottom:6px;">My contribution</p>
-        <p class="body-medium">Every one of these recommendations traces back to specific quotes. I mapped each pain point to its supporting quote directly, then co-facilitated the workshop that prioritised them with Business and IT.</p>
+        <p class="body-medium">I mapped each pain point to its supporting quote directly, then co-facilitated the workshop that prioritised them with Business and IT.</p>
       </div>
     </div>
 
@@ -1496,7 +1507,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
   </div>
 </section>
 
-<!-- ============ TEASER: CYBERSECURITY ============ -->
+<!-- ============ CASE STUDY: CYBERSECURITY INSURANCE ============ -->
 <section class="view" id="view-case-cyber">
   <div class="container">
     <div class="case-hero">
@@ -1504,48 +1515,178 @@ footer a{ color:var(--color-primary); font-weight:500; }
         <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
         All work
       </a>
-      <span class="card-tag">Concept Testing · Jun 2022</span>
+      <span class="card-tag">UX Research · Concept Testing · Jun 2022</span>
       <h1 class="headline-large">Cybersecurity Insurance, Made Relatable</h1>
-      <p class="body-large">Evaluating the desirability of an insurance company's cyber-security offering concepts, and understanding people's ambitions, needs, and everyday anxieties around online risk.</p>
-    </div>
-    <div class="case-section">
-      <p class="label-large section-label">MY ROLE</p>
-      <p class="body-large" style="max-width:640px; color:var(--color-on-surface-variant);">UX Research. I led the concept-testing research, designing the study to get past abstract "cyber security" language and toward how people actually experience digital risk day to day.</p>
-      <div class="note-box" style="margin-top:24px; max-width:640px;">
-        <p class="label-large" style="margin-bottom:6px;">Full visual walkthrough in progress</p>
-        <p class="body-medium">This case study's detailed process and concept visuals are still being prepared for public sharing. Happy to walk through it directly, just reach out below.</p>
+      <p class="body-large">A Swiss insurance company had already launched a first cyber-security product for individual customers. The next question was bigger: would people actually use a fuller platform to understand and act on their own digital risk, not just insure against it after the fact?</p>
+      <div class="case-outline">
+        <span class="step">Context &amp; role</span><span class="sep">→</span>
+        <span class="step">Research approach</span><span class="sep">→</span>
+        <span class="step">Four archetypes</span><span class="sep">→</span>
+        <span class="step">What we found</span><span class="sep">→</span>
+        <span class="step">Guiding principles</span><span class="sep">→</span>
+        <span class="step">Outcome</span>
       </div>
     </div>
-    <footer><div class="row"><a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>Back to all work</a><a href="mailto:tanya.raschle@gmail.com">Get in touch →</a></div></footer>
-  </div>
-</section>
 
-<!-- ============ TEASER: RAILWAY / EMPLOYEE MINDSETS ============ -->
-<section class="view" id="view-case-rail">
-  <div class="container">
-    <div class="case-hero">
-      <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin-top:24px;">
-        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
-        All work
-      </a>
-      <span class="card-tag">Exploratory Research · Oct 2022</span>
-      <h1 class="headline-large">Understanding Employee Mindsets</h1>
-      <p class="body-large">Supporting a national railway company's large-scale technology rollout by shifting the approach from purely technical to employee-centred.</p>
-    </div>
+    <!-- CONTEXT & ROLE -->
     <div class="case-section">
-      <p class="label-large section-label">MY ROLE</p>
-      <p class="body-large" style="max-width:640px; color:var(--color-on-surface-variant);">UX Research. I ran interviews, in Swiss German, with employees across diverse roles, uncovering the mindsets and behaviours that informed targeted rollout strategies and adoption roadmaps.</p>
-      <div class="note-box" style="margin-top:24px; max-width:640px;">
-        <p class="label-large" style="margin-bottom:6px;">Full visual walkthrough in progress</p>
-        <p class="body-medium">This case study's detailed process and concept visuals are still being prepared for public sharing. Happy to walk through it directly, just reach out below.</p>
+      <div class="two-col">
+        <div>
+          <p class="label-large section-label">CONTEXT &amp; ROLE</p>
+          <h2 class="title-large" style="margin-bottom:16px;">Why this mattered</h2>
+          <p class="body-large" style="color:var(--color-on-surface-variant);">Following a successful first cyber-insurance launch, the brief was to evaluate a much bigger concept: a central hub where people could understand their own digital risk and act on it, not just claim against it afterwards. My job was to get past abstract "cyber security" language and test whether people actually wanted that, and what it would need to earn their trust.</p>
+        </div>
+        <div>
+          <ul class="role-list">
+            <li>
+              <p class="title-medium">Research design &amp; fieldwork</p>
+              <p class="body-medium">Planned and conducted ethnographic interviews to understand people's real ambitions, habits, and anxieties around online risk, not just their reaction to a concept.</p>
+            </li>
+            <li>
+              <p class="title-medium">Concept prioritisation exercise</p>
+              <p class="body-medium">Designed a "buy-a-feature" exercise, giving participants a symbolic budget to build their own package from the service elements on offer.</p>
+            </li>
+            <li>
+              <p class="title-medium">Archetype development</p>
+              <p class="body-medium">Synthesised interviews into four behavioural archetypes, mapped across how much people knew about cyber risk and how actively they acted on it.</p>
+            </li>
+            <li>
+              <p class="title-medium">Principle &amp; concept development</p>
+              <p class="body-medium">Helped translate the research into guiding principles and a validated concept for a central, ongoing cyber-security relationship, not a one-off purchase.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    <footer><div class="row"><a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>Back to all work</a><a href="mailto:tanya.raschle@gmail.com">Get in touch →</a></div></footer>
+
+    <!-- RESEARCH APPROACH -->
+    <div class="case-section">
+      <p class="label-large section-label">RESEARCH APPROACH</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Beyond a concept reaction</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">Twelve in-depth interviews used ethnographic methods to get past surface-level concept reactions, toward how people actually think, feel, and behave around their own online risk.</p>
+
+      <div class="stat-strip">
+        <div class="stat"><span class="stat-num">12</span><span class="stat-label">ethnographic interviews</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">concept elements tested</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">behavioural archetypes</span></div>
+        <div class="stat"><span class="stat-num">3/3</span><span class="stat-label">hypotheses validated</span></div>
+      </div>
+
+      <p class="body-medium" style="margin-top:24px; max-width:680px;">Alongside the interviews, participants took part in a "buy-a-feature" exercise: given a symbolic budget, they assembled their own package from the available services, showing directly what they valued rather than what they said they valued.</p>
+    </div>
+
+    <!-- FOUR ARCHETYPES -->
+    <div class="case-section">
+      <p class="label-large section-label">FOUR ARCHETYPES</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Not everyone is unaware, and not everyone is careless</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px; margin-bottom:8px;">Interviews mapped cleanly across two axes: how much people knew about cyber risk, and how actively they did anything about it.</p>
+
+      <div class="segment-grid">
+        <div class="segment-card">
+          <span class="num" style="font-size:11px; letter-spacing:0.4px;">KNOWS THE RISK · PASSIVE</span>
+          <p class="title-medium" style="margin-top:6px;">The Comfortable Ones</p>
+          <p class="body-medium">Have a basic grasp of online risk but under-protect anyway. Open to safety measures, as long as it costs them no real effort.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num" style="font-size:11px; letter-spacing:0.4px;">KNOWS THE RISK · ACTIVE</span>
+          <p class="title-medium" style="margin-top:6px;">The Self-Assured</p>
+          <p class="body-medium">Take calculated risks, trust their own vetted setup over big providers, and often end up informally advising their own circle.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num" style="font-size:11px; letter-spacing:0.4px;">UNAWARE · PASSIVE</span>
+          <p class="title-medium" style="margin-top:6px;">The Naive Drifters</p>
+          <p class="body-medium">The internet is a black box to them. If it's convenient, like free WiFi, they use it without a second thought.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num" style="font-size:11px; letter-spacing:0.4px;">UNAWARE · ACTIVE</span>
+          <p class="title-medium" style="margin-top:6px;">The Dependent Ones</p>
+          <p class="body-medium">Do use protective tools, usually installed by someone else, but don't really understand how they work or why.</p>
+        </div>
+      </div>
+      <p class="body-medium" style="margin-top:14px;">The same product pitch does not land the same way with all four. It has to earn attention differently for each.</p>
+    </div>
+
+    <!-- WHAT WE FOUND -->
+    <div class="case-section">
+      <p class="label-large section-label">WHAT WE FOUND</p>
+      <h2 class="title-large" style="margin-bottom:16px;">The gap wasn't awareness. It was what to do with it.</h2>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <span class="num">01</span>
+          <p class="title-medium" style="margin-top:4px;">Everyone feels vaguely at risk, and freezes there</p>
+          <p class="body-medium">Most people sense a threat is out there but can't picture it concretely enough to act on, or even to know what "safe" would look like.</p>
+          <blockquote>"I don't feel threatened. I can imagine it's out there, I just don't see it."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">02</span>
+          <p class="title-medium" style="margin-top:4px;">Trust in insurers is real, but conditional</p>
+          <p class="body-medium">People already extend baseline trust to insurers on safety and support. That trust doesn't automatically carry over to technical, IT-specific competence.</p>
+          <blockquote>"I'd trust an insurer with this. More than most other industries."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">03</span>
+          <p class="title-medium" style="margin-top:4px;">Awareness doesn't reliably lead to action</p>
+          <p class="body-medium">Even people who know they should do more openly admit they won't, unless it takes close to zero extra effort on their part.</p>
+        </div>
+        <div class="insight-card">
+          <span class="num">04</span>
+          <p class="title-medium" style="margin-top:4px;">Cyber safety spreads person to person, not top-down</p>
+          <p class="body-medium">People trust their own circle on cyber questions more than official channels, and the more capable ones already act as unofficial IT support for family and friends.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote-band">
+      <p class="pull-quote-text">"How do I even prove to an insurer that something happened in the digital world?"</p>
+      <span class="pull-quote-attr">A participant, on why cyber risk feels different from risks they already understand</span>
+    </div>
+
+    <!-- GUIDING PRINCIPLES -->
+    <div class="case-section">
+      <p class="label-large section-label">GUIDING PRINCIPLES</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Six principles to keep every decision human</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px; margin-bottom:8px;">The research converged into six principles, used afterward to keep design and content decisions consistent across teams.</p>
+
+      <div class="segment-grid">
+        <div class="segment-card"><p class="title-medium">Playful</p><p class="body-medium">Approachable enough that people engage before they disengage out of anxiety.</p></div>
+        <div class="segment-card"><p class="title-medium">Relatable</p><p class="body-medium">Grounded in everyday language and situations, not abstract security jargon.</p></div>
+        <div class="segment-card"><p class="title-medium">Educative</p><p class="body-medium">Builds real understanding, not just a sense of having "done something."</p></div>
+        <div class="segment-card"><p class="title-medium">Actionable</p><p class="body-medium">Every insight comes with a next step that's genuinely easy to take.</p></div>
+        <div class="segment-card"><p class="title-medium">Curated</p><p class="body-medium">A short, well-chosen set of options beats an overwhelming full menu.</p></div>
+        <div class="segment-card"><p class="title-medium">Personalised</p><p class="body-medium">Tailored to how much a person already knows and does, not a single generic pitch.</p></div>
+      </div>
+    </div>
+
+    <!-- OUTCOME -->
+    <div class="case-section">
+      <p class="label-large section-label">OUTCOME</p>
+      <h2 class="title-large" style="margin-bottom:16px;">What this made possible</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">The concept, framed as a central hub for understanding and acting on personal cyber risk, tested well across all four archetypes. All three of the project's core hypotheses were validated directly against the research:</p>
+
+      <div class="hyp-list">
+        <div class="hyp-item"><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><p class="body-medium">People would use a central point of contact for cyber risk, if it were offered by an insurer.</p></div>
+        <div class="hyp-item"><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><p class="body-medium">Such a platform would genuinely help build their knowledge and awareness of online risk.</p></div>
+        <div class="hyp-item"><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><p class="body-medium">Customers understood what the hub was offering them.</p></div>
+      </div>
+
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px; margin-top:20px;">That gave the client a validated direction, and a concrete set of principles, to carry into the next phase of the offering. A version of this concept, cyber insurance bundled with a broader set of prevention and support services, is now a live product.</p>
+    </div>
+
+    <footer>
+      <div class="row">
+        <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+          Back to all work
+        </a>
+        <a href="mailto:tanya.raschle@gmail.com">Get in touch →</a>
+      </div>
+    </footer>
   </div>
 </section>
 
 <script>
-var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/migration':'view-case-migration', '#/case/pf':'view-case-pf', '#/case/menu':'view-case-menu', '#/case/cyber':'view-case-cyber', '#/case/rail':'view-case-rail' };
+var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/migration':'view-case-migration', '#/case/pf':'view-case-pf', '#/case/menu':'view-case-menu', '#/case/cyber':'view-case-cyber' };
 
 function showView(id){
   var views = document.querySelectorAll('.view');
