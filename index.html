@@ -207,6 +207,19 @@ button{ font-family:inherit; cursor:pointer; }
 @media (max-width:600px){ .case-outline{ font-size:12px; } }
 
 .connective-cue{ font-size:13px; font-weight:600; letter-spacing:0.2px; color:var(--color-primary); margin:28px 0 4px; text-transform:uppercase; }
+
+/* ---------- PF case study: prioritization matrix ---------- */
+.priority-matrix{ display:grid; grid-template-columns:130px repeat(6,1fr); gap:5px; margin-top:24px; }
+@media (max-width:600px){
+  .priority-matrix{ grid-template-columns:70px repeat(6,1fr); gap:3px; }
+  .priority-matrix .pm-head{ font-size:9px; }
+  .priority-matrix .pm-label{ font-size:10px; }
+  .priority-matrix .pm-cell{ height:34px; font-size:7px; }
+}
+.priority-matrix .pm-head{ font-size:11px; font-weight:600; color:var(--color-on-surface-variant); text-align:center; padding-bottom:6px; min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.priority-matrix .pm-label{ font-size:12px; font-weight:500; color:var(--color-on-surface); display:flex; align-items:center; padding-right:6px; min-width:0; }
+.priority-matrix .pm-cell{ height:40px; border-radius:6px; background:var(--color-surface-variant); display:flex; align-items:center; justify-content:center; text-align:center; font-size:9px; font-weight:700; color:transparent; line-height:1.1; padding:2px; min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.priority-matrix .pm-cell.archetype{ background:var(--color-primary); color:var(--color-on-primary); text-transform:uppercase; letter-spacing:0.2px; }
 .pain-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:28px; }
 @media (max-width:720px){ .pain-grid{ grid-template-columns:1fr; } }
 
@@ -361,6 +374,37 @@ footer a{ color:var(--color-primary); font-weight:500; }
               <rect x="16" y="115" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
               <rect x="78" y="115" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
               <rect x="140" y="115" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
+            </svg>
+          </div>
+        </a>
+
+        <a class="card card-featured" href="#/case/pf" tabindex="0" onclick="return go('view-case-pf','/case/pf')">
+          <div class="card-copy">
+            <span class="card-tag">UX Research · Strategy</span>
+            <h2 class="title-large">Making Customer Centricity Everyone's Job</h2>
+            <p class="body-medium">Helping a Swiss financial institution turn an abstract idea of "customer centricity" into a shared vision, a prioritisation model, and eventually a dedicated CX team.</p>
+            <span class="card-arrow">View case study
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </span>
+          </div>
+          <div class="card-visual">
+            <svg viewBox="0 0 200 140" width="220">
+              <rect x="0" y="0" width="200" height="140" rx="16" fill="#EADDFF"/>
+              <g opacity="0.9">
+                <rect x="25" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="58" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="91" y="20" width="28" height="20" rx="3" fill="#6750A4"/>
+                <rect x="124" y="20" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="25" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="58" y="45" width="28" height="20" rx="3" fill="#6750A4"/>
+                <rect x="91" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="124" y="45" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="25" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="58" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="91" y="70" width="28" height="20" rx="3" fill="#6750A4" opacity="0.25"/>
+                <rect x="124" y="70" width="28" height="20" rx="3" fill="#6750A4"/>
+              </g>
+              <rect x="25" y="100" width="127" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
             </svg>
           </div>
         </a>
@@ -999,6 +1043,195 @@ footer a{ color:var(--color-primary); font-weight:500; }
   </div>
 </section>
 
+<!-- ============ CASE STUDY: PAYMENT SOLUTIONS CX STRATEGY ============ -->
+<section class="view" id="view-case-pf">
+  <div class="container">
+    <div class="case-hero">
+      <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin-top:24px;">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+        All work
+      </a>
+      <span class="card-tag">UX Research · Strategy · Apr 2023</span>
+      <h1 class="headline-large">Making Customer Centricity Everyone's Job</h1>
+      <p class="body-large">A Swiss financial institution's Payment Solutions division wanted every employee, not just designers, to understand and act on what "customer-centric" actually meant for their daily work. I helped lead the research and co-creation behind a CX Vision &amp; Strategy built to do exactly that, and to decide which customers to prioritise first.</p>
+      <div class="case-outline">
+        <span class="step">Context &amp; role</span><span class="sep">→</span>
+        <span class="step">Research approach</span><span class="sep">→</span>
+        <span class="step">What we found</span><span class="sep">→</span>
+        <span class="step">Prioritisation model</span><span class="sep">→</span>
+        <span class="step">Vision to strategy</span><span class="sep">→</span>
+        <span class="step">What I'd do differently</span><span class="sep">→</span>
+        <span class="step">Outcome</span>
+      </div>
+    </div>
+
+    <!-- CONTEXT & ROLE -->
+    <div class="case-section">
+      <div class="two-col">
+        <div>
+          <p class="label-large section-label">CONTEXT &amp; ROLE</p>
+          <h2 class="title-large" style="margin-bottom:16px;">Why this mattered</h2>
+          <p class="body-large" style="color:var(--color-on-surface-variant);">This followed an earlier CX maturity assessment that surfaced a clear gap: the organisation talked about customer centricity, but had no shared, org-wide definition of what it actually meant or who to prioritise. My job was to help build both, in a way concrete enough that people outside design would actually use it.</p>
+        </div>
+        <div>
+          <ul class="role-list">
+            <li>
+              <p class="title-medium">Research design &amp; fieldwork</p>
+              <p class="body-medium">Planned and conducted customer interviews alongside the client's own account managers, combining outside-in customer perspective with inside-out account knowledge.</p>
+            </li>
+            <li>
+              <p class="title-medium">Insight synthesis</p>
+              <p class="body-medium">Synthesised interviews into thematic clusters covering trust, expertise, personal relationships, and the quiet influence of third-party software on provider choice.</p>
+            </li>
+            <li>
+              <p class="title-medium">Prioritisation framework</p>
+              <p class="body-medium">Co-designed a two-dimensional model that turned a large, undifferentiated customer base into a manageable set of priority archetypes.</p>
+            </li>
+            <li>
+              <p class="title-medium">Vision &amp; strategy development</p>
+              <p class="body-medium">Helped translate research into a CX Vision, ten Experience Guidelines, and a strategy meant to read the same way to everyone, regardless of role.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESEARCH APPROACH -->
+    <div class="case-section">
+      <p class="label-large section-label">RESEARCH APPROACH</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Combining outside-in and inside-out</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">Working inside an interdisciplinary team split between a "business" perspective and a "human" perspective, we paired direct customer research with an unusually deep look at the client's own internal data.</p>
+
+      <div class="stat-strip">
+        <div class="stat"><span class="stat-num">25</span><span class="stat-label">interviews (customers &amp; account managers)</span></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-label">experience guidelines delivered</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">core deliverables co-created</span></div>
+      </div>
+
+      <p class="body-medium" style="margin-top:24px; max-width:680px;">Alongside 20 client interviews and 5 conversations with the client's own account managers, we ran an internal analysis of profitability and transaction data across industries, plus an external competitive benchmark of rival providers' experience at key moments like onboarding and decision-making.</p>
+    </div>
+
+    <!-- WHAT WE FOUND -->
+    <div class="case-section">
+      <p class="label-large section-label">WHAT WE FOUND</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Trust, expertise, and a quiet third party in every decision</h2>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <span class="num">01</span>
+          <p class="title-medium" style="margin-top:4px;">Trust built on tradition</p>
+          <p class="body-medium">Clients associated the institution with deep-rooted, dependable heritage, but expected that trust to be matched with modern relevance.</p>
+          <blockquote>"You're the bank my parents used. That's a strength, if you can still keep up."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">02</span>
+          <p class="title-medium" style="margin-top:4px;">Expertise is expected, not optional</p>
+          <p class="body-medium">Clients wanted a provider who understood their specific industry, not just one that processed payments.</p>
+          <blockquote>"I don't want to have to explain my own business to the person advising me on it."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">03</span>
+          <p class="title-medium" style="margin-top:4px;">Personal relationships still win loyalty</p>
+          <p class="body-medium">A genuine, consistent point of contact mattered more to retention than any single digital feature.</p>
+          <blockquote>"I'll stay as long as I have someone who actually knows our account."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">04</span>
+          <p class="title-medium" style="margin-top:4px;">Software vendors quietly decide</p>
+          <p class="body-medium">For many clients, the choice of payment provider was shaped less by the bank itself than by whichever accounting or ERP software they already used.</p>
+          <blockquote>"Honestly, we went with whoever our software already talked to."</blockquote>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote-band">
+      <p class="pull-quote-text">"You're the bank my parents used. That's a strength, if you can still keep up."</p>
+      <span class="pull-quote-attr">A client reflecting on heritage versus relevance</span>
+    </div>
+
+    <!-- PRIORITIZATION MODEL -->
+    <div class="case-section">
+      <p class="label-large section-label">PRIORITISATION MODEL</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Turning "all customers" into a workable priority list</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px; margin-bottom:8px;">Internal data showed profitability was concentrated in a handful of industries, while research showed needs varied just as much by company size as by sector. We combined both into a single model.</p>
+
+      <div class="priority-matrix">
+        <div></div>
+        <div class="pm-head">Healthcare</div><div class="pm-head">Retail</div><div class="pm-head">Manuf.</div><div class="pm-head">Prof. serv.</div><div class="pm-head">Hosp.</div><div class="pm-head">Tech</div>
+
+        <div class="pm-label">Corporates</div>
+        <div class="pm-cell archetype">Platinum</div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div>
+
+        <div class="pm-label">Mid-sized</div>
+        <div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell archetype">Growth</div>
+
+        <div class="pm-label">Small &amp; startups</div>
+        <div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell"></div><div class="pm-cell archetype">Potential</div><div class="pm-cell"></div>
+      </div>
+      <p class="body-medium" style="margin-top:14px;">Simplified from the real model. Crossing company size against industry surfaced specific "archetypes", like a platinum-tier healthcare corporate, worth designing for deliberately rather than treating every client the same.</p>
+    </div>
+
+    <!-- VISION TO STRATEGY -->
+    <div class="case-section">
+      <p class="label-large section-label">FROM RESEARCH TO STRATEGY</p>
+      <h2 class="title-large" style="margin-bottom:8px;">One vision, understood the same way by everyone</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px; margin-bottom:8px;">The research fed four deliverables, packaged as an interactive walkthrough any employee could explore, not a deck destined for a shelf.</p>
+
+      <div class="principle-row">
+        <span class="principle-num">01</span>
+        <div><p class="title-medium">CX Vision</p><p class="body-medium">A tangible ambition written from the customer's point of view: what the outcome should feel like, not the roadmap to get there, so anyone could recognise themselves in it regardless of role.</p></div>
+      </div>
+      <div class="principle-row">
+        <span class="principle-num">02</span>
+        <div><p class="title-medium">Experience Guidelines</p><p class="body-medium">Ten shared criteria grounded directly in the research, acting as a compass for leadership and for any team shaping a future product or service.</p></div>
+      </div>
+      <div class="principle-row">
+        <span class="principle-num">03</span>
+        <div><p class="title-medium">Prioritisation Model &amp; Archetypes</p><p class="body-medium">A strategic tool combining company size and industry, helping leadership choose, deliberately, which customer groups to grow with first.</p></div>
+      </div>
+      <div class="principle-row">
+        <span class="principle-num">04</span>
+        <div><p class="title-medium">CX Strategy</p><p class="body-medium">The concrete translation of the vision into strategic direction, with specific measures and what it would actually take to operationalise them.</p></div>
+      </div>
+    </div>
+
+    <!-- WHAT I'D DO DIFFERENTLY -->
+    <div class="case-section">
+      <p class="label-large section-label">WHAT I'D DO DIFFERENTLY</p>
+      <h2 class="title-large" style="margin-bottom:16px;">A candid look back</h2>
+      <div class="principle-row">
+        <span class="principle-num">01</span>
+        <div><p class="title-medium">Bring the client in as an equal even earlier</p><p class="body-medium">Co-creating side by side, and letting the client experience our own working culture directly, gave them real ownership and helped the findings actually travel back into their organisation. Worth leaning into even harder next time.</p></div>
+      </div>
+      <div class="principle-row">
+        <span class="principle-num">02</span>
+        <div><p class="title-medium">Define roles and accountability sooner</p><p class="body-medium">Responsibilities, especially on the client side, could have been clearer from the start. Team culture and informal communication still needed time to develop mid-project.</p></div>
+      </div>
+      <div class="principle-row">
+        <span class="principle-num">03</span>
+        <div><p class="title-medium">Agree on the final format earlier</p><p class="body-medium">Bringing the visual designer in sooner, and settling on the shape of the final deliverable earlier, would have let design and content develop together instead of one waiting on the other.</p></div>
+      </div>
+    </div>
+
+    <!-- OUTCOME -->
+    <div class="case-section">
+      <p class="label-large section-label">OUTCOME</p>
+      <h2 class="title-large" style="margin-bottom:16px;">What this made possible</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">The recommendations led directly to a new, dedicated Customer Experience department being created within the client's Payment Solutions division. Presented to senior leadership, the work landed with enough clarity and energy that the client's own team became active advocates for the CX Vision inside the organisation, carrying it forward well beyond the length of the engagement.</p>
+    </div>
+
+    <footer>
+      <div class="row">
+        <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+          Back to all work
+        </a>
+        <a href="mailto:tanya.raschle@gmail.com">Get in touch →</a>
+      </div>
+    </footer>
+  </div>
+</section>
+
 <!-- ============ TEASER: CYBERSECURITY ============ -->
 <section class="view" id="view-case-cyber">
   <div class="container">
@@ -1048,7 +1281,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
 </section>
 
 <script>
-var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/migration':'view-case-migration', '#/case/cyber':'view-case-cyber', '#/case/rail':'view-case-rail' };
+var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/migration':'view-case-migration', '#/case/pf':'view-case-pf', '#/case/cyber':'view-case-cyber', '#/case/rail':'view-case-rail' };
 
 function showView(id){
   var views = document.querySelectorAll('.view');
