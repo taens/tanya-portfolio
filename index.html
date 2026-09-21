@@ -199,6 +199,10 @@ button{ font-family:inherit; cursor:pointer; }
 .insight-card blockquote{ margin:10px 0 0; padding-left:12px; border-left:3px solid var(--color-primary-container); font-style:italic; color:var(--color-on-surface-variant); font-size:14px; }
 
 .scene-answers{ font-size:12px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--color-tertiary); margin:2px 0 20px; }
+.decision-tag{ display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; margin:2px 0 20px; }
+.decision-tag.keep{ color:#0B7A3D; }
+.decision-tag.tweak{ color:#8A6D00; }
+.decision-tag.kill{ color:#B3261E; }
 
 .case-outline{ display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:24px; font-size:13px; color:var(--color-on-surface-variant); }
 .case-outline .step{ font-weight:500; }
@@ -234,6 +238,13 @@ button{ font-family:inherit; cursor:pointer; }
 .wf-line{ height:10px; border-radius:4px; background:var(--color-surface-variant); }
 .wf-row{ display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:var(--shape-md); background:var(--color-surface-container-low); }
 .wf-check{ width:18px; height:18px; border-radius:5px; border:2px solid var(--color-outline); flex-shrink:0; }
+.wf-chevron{ width:18px; height:18px; flex-shrink:0; display:flex; align-items:center; justify-content:center; color:var(--color-on-surface-variant); font-size:18px; }
+
+.wf-stat-row{ display:flex; align-items:center; gap:10px; padding:9px 0; }
+.wf-stat-label{ width:78px; flex-shrink:0; font-size:13px; color:var(--color-on-surface); }
+.wf-stat-track{ flex:1; height:8px; background:var(--color-surface-variant); border-radius:4px; overflow:hidden; }
+.wf-stat-fill{ height:100%; background:var(--color-primary); border-radius:4px; }
+.wf-stat-pct{ width:32px; flex-shrink:0; text-align:right; font-size:12px; font-weight:600; color:var(--color-on-surface-variant); }
 .wf-check.done{ background:var(--color-primary); border-color:var(--color-primary); position:relative; }
 .wf-check.done::after{ content:""; position:absolute; left:4px; top:0px; width:5px; height:9px; border:solid white; border-width:0 2px 2px 0; transform:rotate(45deg); }
 .wf-pill{ font-size:11px; font-weight:600; padding:3px 10px; border-radius:var(--shape-full); white-space:nowrap; }
@@ -250,6 +261,7 @@ button{ font-family:inherit; cursor:pointer; }
 .wf-caption{ margin-top:16px; display:flex; gap:10px; align-items:flex-start; }
 .wf-title{ font-size:14px; font-weight:600; color:var(--color-on-surface); margin:0 0 2px; }
 .wf-row-text{ flex:1; font-size:13px; color:var(--color-on-surface); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.wf-link{ color:var(--color-primary); font-weight:600; }
 .wf-footnote{ font-size:11px; color:var(--color-on-surface-variant); margin-top:2px; }
 
 .pull-quote-band{ background:var(--color-primary); border-radius:var(--shape-xl); padding:56px 40px; text-align:center; margin:8px 0; }
@@ -405,6 +417,39 @@ footer a{ color:var(--color-primary); font-weight:500; }
               </g>
               <rect x="25" y="100" width="127" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
             </svg>
+          </div>
+        </a>
+
+        <a class="card card-featured" href="#/case/menu" tabindex="0" onclick="return go('view-case-menu','/case/menu')">
+          <div class="card-copy">
+            <span class="card-tag">UX Research · Concept Testing</span>
+            <h2 class="title-large">Finding Out What Restaurant Owners Actually Want</h2>
+            <p class="body-medium">Testing which digital-menu features independent restaurant owners across three countries would actually want, before recommending which ones to build first.</p>
+            <span class="card-arrow">View case study
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </span>
+          </div>
+          <div class="card-visual">
+            <svg viewBox="0 0 200 140" width="220">
+<rect x="0" y="0" width="200" height="140" rx="16" fill="#EADDFF"/>
+<line x1="18" y1="28" x2="175" y2="58" stroke="#6750A4" stroke-width="1.5" opacity="0.3"/>
+<line x1="18" y1="112" x2="175" y2="82" stroke="#6750A4" stroke-width="1.5" opacity="0.3"/>
+<circle cx="27.0" cy="40.3" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="41.5" cy="40.6" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="56.5" cy="37.4" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="68.1" cy="42.0" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="27.0" cy="58.4" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="44.0" cy="59.8" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="57.3" cy="59.9" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="70.6" cy="57.9" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="28.5" cy="82.2" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="42.1" cy="81.4" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="56.7" cy="77.4" r="4" fill="#6750A4" opacity="0.35"/>
+<circle cx="150" cy="58" r="7" fill="#6750A4"/>
+<circle cx="163" cy="70" r="7" fill="#6750A4"/>
+<circle cx="150" cy="82" r="7" fill="#6750A4"/>
+<rect x="18" y="120" width="45" height="7" rx="3" fill="#6750A4" opacity="0.35"/>
+<rect x="135" y="120" width="40" height="7" rx="3" fill="#6750A4"/>            </svg>
           </div>
         </a>
 
@@ -1230,6 +1275,227 @@ footer a{ color:var(--color-primary); font-weight:500; }
   </div>
 </section>
 
+<!-- ============ CASE STUDY: RESTAURANT MENU TOOL ============ -->
+<section class="view" id="view-case-menu">
+  <div class="container">
+    <div class="case-hero">
+      <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin-top:24px;">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+        All work
+      </a>
+      <span class="card-tag">UX Research · Concept Testing · 2018</span>
+      <h1 class="headline-large">Finding Out What Restaurant Owners Actually Want</h1>
+      <p class="body-large">An industry-wide push to get independent restaurants online assumed owners wanted more digital features. Testing that assumption directly with restaurant owners across three countries showed something more nuanced: most of what gets built for restaurants, restaurants don't actually want.</p>
+      <div class="case-outline">
+        <span class="step">Context &amp; role</span><span class="sep">→</span>
+        <span class="step">Research approach</span><span class="sep">→</span>
+        <span class="step">What we found</span><span class="sep">→</span>
+        <span class="step">Four owners</span><span class="sep">→</span>
+        <span class="step">Concept testing</span><span class="sep">→</span>
+        <span class="step">Outcome</span>
+      </div>
+    </div>
+
+    <!-- CONTEXT & ROLE -->
+    <div class="case-section">
+      <div class="two-col">
+        <div>
+          <p class="label-large section-label">CONTEXT &amp; ROLE</p>
+          <h2 class="title-large" style="margin-bottom:16px;">Why this mattered</h2>
+          <p class="body-large" style="color:var(--color-on-surface-variant);">This was a nine-week student business project for HoReCa.digital, an initiative from Metro Group, who wanted to build a digital menu tool for independent restaurants. My job, alongside a team of five, was to make sure the tool got built around what owners actually wanted, not what seemed technically possible.</p>
+        </div>
+        <div>
+          <ul class="role-list">
+            <li>
+              <p class="title-medium">Research design &amp; fieldwork</p>
+              <p class="body-medium">Planned and conducted interviews with independent restaurant owners across Lausanne, Paris, and Munich, alongside focus groups with guests.</p>
+            </li>
+            <li>
+              <p class="title-medium">Design Sprint facilitation</p>
+              <p class="body-medium">Followed the Design Sprint methodology to move from insight to eleven testable paper prototypes in a single week.</p>
+            </li>
+            <li>
+              <p class="title-medium">Persona development</p>
+              <p class="body-medium">Synthesised interviews into four distinct owner personas, used to decide which features to prioritise for whom.</p>
+            </li>
+            <li>
+              <p class="title-medium">Iterative decision-making</p>
+              <p class="body-medium">Made explicit keep, tweak, or kill calls on every prototyped feature based on direct owner feedback, not assumption.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESEARCH APPROACH -->
+    <div class="case-section">
+      <p class="label-large section-label">RESEARCH APPROACH</p>
+      <h2 class="title-large" style="margin-bottom:16px;">Two rounds of testing, three countries</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">We paired industry-wide data on restaurant websites with direct fieldwork: paper prototypes tested with owners in round one, a refined interactive prototype tested with owners in round two.</p>
+
+      <div class="stat-strip">
+        <div class="stat"><span class="stat-num">11</span><span class="stat-label">features paper-prototyped</span></div>
+        <div class="stat"><span class="stat-num">33</span><span class="stat-label">restaurant owners interviewed</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">countries covered</span></div>
+        <div class="stat"><span class="stat-num">13</span><span class="stat-label">guests across two focus groups</span></div>
+      </div>
+
+      <p class="body-medium" style="margin-top:24px; max-width:680px;">Round one tested paper prototypes with owners in Munich and Paris. Based on that feedback, the strongest concepts were rebuilt as an interactive smartphone prototype and tested again with owners in Berlin and Switzerland. In parallel, we analysed 100 restaurant websites in Paris and Berlin against their TripAdvisor and Yelp ratings, to see whether online presence actually correlated with performance.</p>
+    </div>
+
+    <!-- WHAT WE FOUND -->
+    <div class="case-section">
+      <p class="label-large section-label">WHAT WE FOUND</p>
+      <h2 class="title-large" style="margin-bottom:16px;">The gap wasn't skill. It was trust.</h2>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <span class="num">01</span>
+          <p class="title-medium" style="margin-top:4px;">Most menus aren't even online</p>
+          <p class="body-medium">Close to half the restaurants we analysed in Paris had no menu on their website at all, despite it being the single most-searched-for detail before a visit.</p>
+        </div>
+        <div class="insight-card">
+          <span class="num">02</span>
+          <p class="title-medium" style="margin-top:4px;">PDF menus are a dead end</p>
+          <p class="body-medium">PDFs force a download, get poorly indexed by search engines, and pull visitors away from the page that's actually meant to sell the restaurant.</p>
+        </div>
+        <div class="insight-card">
+          <span class="num">03</span>
+          <p class="title-medium" style="margin-top:4px;">Photos were more divisive than expected</p>
+          <p class="body-medium">Both guests and owners, independently, rejected a photo on every dish as something you'd expect from a fast-food menu, not an independent kitchen.</p>
+          <blockquote>"It seems cheap. It's not our style."</blockquote>
+        </div>
+        <div class="insight-card">
+          <span class="num">04</span>
+          <p class="title-medium" style="margin-top:4px;">The resistance wasn't really about tech skill</p>
+          <p class="body-medium">Owners' strongest objections were about losing flexibility: a fixed photo or price felt like it would box in a dish they wanted the freedom to keep changing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote-band">
+      <p class="pull-quote-text">"Everyone thinks they are restaurant critics."</p>
+      <span class="pull-quote-attr">An independent restaurant owner on why they're wary of going digital</span>
+    </div>
+
+    <!-- FOUR OWNERS -->
+    <div class="case-section">
+      <p class="label-large section-label">FOUR OWNERS</p>
+      <h2 class="title-large" style="margin-bottom:8px;">Not every owner needed the same tool</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:640px; margin-bottom:8px;">Synthesising the interviews surfaced four distinct mindsets, each with a different relationship to going digital.</p>
+
+      <div class="segment-grid">
+        <div class="segment-card">
+          <span class="num">01</span>
+          <p class="title-medium" style="margin-top:4px;">The Dinosaur</p>
+          <p class="body-medium">20+ years in the business, thriving on reputation and word of mouth. Sees no reason to change what already works.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num">02</span>
+          <p class="title-medium" style="margin-top:4px;">The Skeptical</p>
+          <p class="body-medium">Struggling to attract guests, aware that digital matters, but not convinced enough to invest time or money in it.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num">03</span>
+          <p class="title-medium" style="margin-top:4px;">The Enthusiast</p>
+          <p class="body-medium">Understands the value of a strong online presence, but lacks the skills, so hires it out and hopes it's done well.</p>
+        </div>
+        <div class="segment-card">
+          <span class="num">04</span>
+          <p class="title-medium" style="margin-top:4px;">The Early Adopter</p>
+          <p class="body-medium">Built the business hands-on and wants to run every part of it personally, digital presence included.</p>
+        </div>
+      </div>
+      <p class="body-medium" style="margin-top:14px;">Most owners we spoke to fell closest to the Enthusiast: aware of the stakes, but not equipped to act on them alone.</p>
+    </div>
+
+    <!-- CONCEPT TESTING -->
+    <div class="case-section">
+      <p class="label-large section-label">CONCEPT TESTING</p>
+      <h2 class="title-large" style="margin-bottom:16px;">What survived contact with real owners</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">Eleven paper prototypes went into round one. Each came out tagged keep, tweak, or kill, based directly on what owners said, not what we hoped they'd say.</p>
+
+      <div class="two-col" style="margin-top:24px;">
+        <div class="wf-frame">
+          <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
+          <div class="wf-body">
+            <p class="wf-title">Beef carpaccio · CHF 19</p>
+            <div class="wf-row"><span class="wf-row-text">Allergens</span><div class="wf-chevron">›</div></div>
+            <div class="wf-row"><span class="wf-row-text">Origin of ingredients</span><div class="wf-chevron">›</div></div>
+            <div class="wf-row"><span class="wf-row-text">Chef's notes</span><div class="wf-chevron">›</div></div>
+            <p class="wf-footnote">No photo required. Detail stays one tap away instead of cluttering the base menu.</p>
+          </div>
+        </div>
+        <div>
+          <span class="decision-tag keep">Keep · 11 of 12 owners said yes</span>
+          <div class="wf-caption"><span class="num">1</span><p class="body-medium">The single most popular concept tested: let guests tap into more detail only if they want it.</p></div>
+          <div class="wf-caption"><span class="num">2</span><p class="body-medium">The one thing owners consistently pushed back on: don't force a photo on every dish.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section" style="padding-top:40px;">
+      <div class="two-col">
+        <div class="wf-frame">
+          <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
+          <div class="wf-body">
+            <p class="wf-title">Where your traffic comes from</p>
+            <div class="wf-stat-row"><span class="wf-stat-label">Google</span><div class="wf-stat-track"><div class="wf-stat-fill" style="width:52%;"></div></div><span class="wf-stat-pct">52%</span></div>
+            <div class="wf-stat-row"><span class="wf-stat-label">TripAdvisor</span><div class="wf-stat-track"><div class="wf-stat-fill" style="width:27%; opacity:0.6;"></div></div><span class="wf-stat-pct">27%</span></div>
+            <div class="wf-stat-row"><span class="wf-stat-label">Instagram</span><div class="wf-stat-track"><div class="wf-stat-fill" style="width:21%; opacity:0.35;"></div></div><span class="wf-stat-pct">21%</span></div>
+            <p class="wf-footnote">Past 30 days, shown by default. Owners can tap any channel for more detail.</p>
+          </div>
+        </div>
+        <div>
+          <span class="decision-tag keep">Keep · 8 of 10 owners said yes</span>
+          <div class="wf-caption"><span class="num">1</span><p class="body-medium">Owners wanted to know where their visibility was coming from, without being buried in numbers they never asked for.</p></div>
+          <div class="wf-caption"><span class="num">2</span><p class="body-medium">Showing just the top three channels first, with more detail a tap away, kept it readable at a glance.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section" style="padding-top:40px;">
+      <div class="two-col">
+        <div class="wf-frame">
+          <div class="wf-topbar"><div class="wf-dot"></div><div class="wf-dot"></div><div class="wf-addr"></div></div>
+          <div class="wf-body">
+            <p class="wf-title">Need help?</p>
+            <div class="wf-row"><span class="wf-row-text wf-link">Frequently asked questions</span><div class="wf-chevron">›</div></div>
+            <div class="wf-row"><span class="wf-row-text wf-link">Chat with support</span><div class="wf-chevron">›</div></div>
+            <p class="wf-footnote">An interactive assistant for technical questions and performance queries.</p>
+          </div>
+        </div>
+        <div>
+          <span class="decision-tag kill">Kill · 3 of 9 owners said yes</span>
+          <div class="wf-caption"><span class="num">1</span><p class="body-medium">Tested well with a few, but most owners saw it as a solution to a problem they didn't have.</p></div>
+          <div class="wf-caption"><span class="num">2</span><p class="body-medium">Their honest reaction: if they were stuck, they'd just search Google, not open an in-app chat.</p></div>
+        </div>
+      </div>
+      <div class="note-box" style="margin-top:24px;">
+        <p class="label-large" style="margin-bottom:6px;">My contribution</p>
+        <p class="body-medium">I ran the sessions that produced these decisions, translating and presenting the prototypes to owners in French and German, then facilitated the team's keep, tweak, or kill calls directly against what we'd just heard.</p>
+      </div>
+    </div>
+
+    <!-- OUTCOME -->
+    <div class="case-section">
+      <p class="label-large section-label">OUTCOME</p>
+      <h2 class="title-large" style="margin-bottom:16px;">What this made possible</h2>
+      <p class="body-large" style="color:var(--color-on-surface-variant); max-width:680px;">The research reframed the brief. Instead of building every digital feature that seemed technically possible, we recommended a small set of features matched to how ready each type of owner actually was to change: simplicity for the most resistant, more control for the most engaged. It gave the client something more useful than a feature wish list: proof of exactly which ideas were worth building first, and which weren't worth building at all.</p>
+    </div>
+
+    <footer>
+      <div class="row">
+        <a href="#/" onclick="return go('view-home','/')" class="back-link" style="margin:0;">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+          Back to all work
+        </a>
+        <a href="mailto:tanya.raschle@gmail.com">Get in touch →</a>
+      </div>
+    </footer>
+  </div>
+</section>
+
 <!-- ============ TEASER: CYBERSECURITY ============ -->
 <section class="view" id="view-case-cyber">
   <div class="container">
@@ -1279,7 +1545,7 @@ footer a{ color:var(--color-primary); font-weight:500; }
 </section>
 
 <script>
-var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/migration':'view-case-migration', '#/case/pf':'view-case-pf', '#/case/cyber':'view-case-cyber', '#/case/rail':'view-case-rail' };
+var VIEW_MAP = { '#/':'view-home', '#/case/ib':'view-case-ib', '#/case/migration':'view-case-migration', '#/case/pf':'view-case-pf', '#/case/menu':'view-case-menu', '#/case/cyber':'view-case-cyber', '#/case/rail':'view-case-rail' };
 
 function showView(id){
   var views = document.querySelectorAll('.view');
