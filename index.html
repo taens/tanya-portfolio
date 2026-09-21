@@ -153,6 +153,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 @media (max-width:480px){
   .appbar .chip{ display:none; }
+  .display-large{ font-size:36px; line-height:42px; }
 }
 
 /* ---------- Case study page ---------- */
@@ -285,6 +286,7 @@ button{ font-family:inherit; cursor:pointer; }
 .emo-wrap{ background:var(--color-surface-container-low); border-radius:var(--shape-lg); padding:24px 24px 12px; margin-top:24px; }
 .emo-phases{ display:flex; justify-content:space-between; margin-bottom:8px; }
 .emo-phases span{ font-size:11px; color:var(--color-on-surface-variant); font-weight:500; }
+@media (max-width:600px){ .emo-phases{ flex-wrap:wrap; gap:4px 10px; } .emo-phases span{ font-size:10px; flex:1 1 auto; } }
 
 /* principle rows */
 .principle-row{ display:flex; gap:20px; padding:20px 0; border-bottom:1px solid var(--color-outline-variant); }
@@ -1481,10 +1483,6 @@ footer a{ color:var(--color-primary); font-weight:500; }
           <div class="wf-caption"><span class="num">1</span><p class="body-medium">Tested well with a few, but most owners saw it as a solution to a problem they didn't have.</p></div>
           <div class="wf-caption"><span class="num">2</span><p class="body-medium">Their honest reaction: if they were stuck, they'd just search Google, not open an in-app chat.</p></div>
         </div>
-      </div>
-      <div class="note-box" style="margin-top:24px;">
-        <p class="label-large" style="margin-bottom:6px;">My contribution</p>
-        <p class="body-medium">I ran the sessions that produced these decisions, translating and presenting the prototypes to owners in French and German, then facilitated the team's keep, tweak, or kill calls directly against what we'd just heard.</p>
       </div>
     </div>
 
